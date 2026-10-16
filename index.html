@@ -2,29 +2,30 @@
 <title>Eda'nın Ders Notları</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500&family=Caveat:wght@600;700&display=swap">
 <style>
 :root{
-  --bg:#EDF2F1; --surface:#FFFFFF; --surface-2:#F4F8F7; --ink:#14232A; --muted:#566A70; --line:#D3DFDD;
+  --bg:#F5EFE6; --surface:#FFFCF7; --surface-2:#FAF4EA; --ink:#2B2420; --muted:#6A5E55; --line:#E3D8C8;
   --c-sinaps:#6A48C2; --c-oss:#0B8577; --c-kas:#CF3F55; --c-sinir1:#2C66D1; --c-sinir2:#B26F08; --c-rad:#A92C7A; --c-hucre:#4F7F12; --c-pss1:#B5471C; --c-kafa:#8A5A22; --c-boyun:#1F7A99; --c-his1:#4A5A80; --c-his2:#8E3FA8; --c-epitel:#7C6A0A;
   --good:#1D8449; --bad:#C23636;
   --c:var(--c-sinir1);
   --font-d:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
   --font-b:"Source Sans 3", -apple-system, "Segoe UI", system-ui, sans-serif;
   --font-m:"JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-h:"Caveat", "Bradley Hand", "Segoe Print", cursive;
   --r:14px;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     color-scheme:dark;
-    --bg:#0D1517; --surface:#152024; --surface-2:#1B292E; --ink:#E3ECEA; --muted:#93A6AA; --line:#293B40;
+    --bg:#181412; --surface:#221D19; --surface-2:#2A241F; --ink:#F1E9DF; --muted:#B5A799; --line:#3B332C;
     --c-sinaps:#A88EF3; --c-oss:#3FC3B3; --c-kas:#F27C8C; --c-sinir1:#78A3F6; --c-sinir2:#E9B152; --c-rad:#E47DBB; --c-hucre:#A2CC5C; --c-pss1:#F0936A; --c-kafa:#E0A866; --c-boyun:#6CC4E0; --c-his1:#9FB0D8; --c-his2:#D59BEA; --c-epitel:#D8C25A;
     --good:#4EC47F; --bad:#F27575;
   }
 }
 :root[data-theme="dark"]{
   color-scheme:dark;
-  --bg:#0D1517; --surface:#152024; --surface-2:#1B292E; --ink:#E3ECEA; --muted:#93A6AA; --line:#293B40;
+  --bg:#181412; --surface:#221D19; --surface-2:#2A241F; --ink:#F1E9DF; --muted:#B5A799; --line:#3B332C;
   --c-sinaps:#A88EF3; --c-oss:#3FC3B3; --c-kas:#F27C8C; --c-sinir1:#78A3F6; --c-sinir2:#E9B152; --c-rad:#E47DBB; --c-hucre:#A2CC5C; --c-pss1:#F0936A; --c-kafa:#E0A866; --c-boyun:#6CC4E0; --c-his1:#9FB0D8; --c-his2:#D59BEA; --c-epitel:#D8C25A;
   --good:#4EC47F; --bad:#F27575;
 }
@@ -43,7 +44,7 @@ ul,ol{padding-left:22px;margin:8px 0}
 li{margin:4px 0}
 li::marker{color:var(--c)}
 b,strong{font-weight:700}
-.hl{background:var(--soft-2);padding:0 4px;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hl{background:linear-gradient(transparent 46%,color-mix(in srgb,var(--c) 32%,transparent) 46%,color-mix(in srgb,var(--c) 32%,transparent) 94%,transparent 94%);padding:0 2px;border-radius:2px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .mono{font-family:var(--font-m);font-size:.9em}
 .eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 button{font:inherit;color:inherit;cursor:pointer}
@@ -234,8 +235,10 @@ svg .mutf{fill:var(--muted)}
 .pdfc .pmain .dl{color:var(--c);font-weight:700;margin-top:6px}
 .pdfc .pbw{display:flex;align-items:center;gap:8px;border-top:1px solid var(--line);padding:10px 16px;font-size:14px;font-weight:600;color:var(--ink);text-decoration:none;background:var(--surface-2)}
 .pdfc .pbw::before{content:"";width:12px;height:12px;border-radius:3px;background:linear-gradient(90deg,#111 50%,#fff 50%);border:1px solid var(--muted)}
-.callout.star{background:color-mix(in srgb,var(--c-sinir2) 13%,var(--surface));border-left:4px solid var(--c-sinir2)}
-.callout.star .lab{background:var(--c-sinir2);color:var(--surface)}
+.callout.star{background:color-mix(in srgb,var(--c-sinir2) 11%,var(--surface));border:1px solid color-mix(in srgb,var(--c-sinir2) 45%,transparent)}
+.callout.star .lab,.callout.tip .lab{background:none;padding:0;font-family:var(--font-h);font-size:22px;font-weight:700;letter-spacing:0;text-transform:none;line-height:1.1;margin-bottom:2px}
+.callout.star .lab{color:color-mix(in srgb,var(--c-sinir2) 85%,var(--ink))}
+.callout.tip .lab{color:var(--c)}
 /* PDF görüntüleyici (indirme yetkisi olmayan görünümler için) */
 .pv{position:fixed;inset:0;z-index:50;background:var(--bg);display:flex;flex-direction:column}
 .pv[hidden]{display:none}
@@ -269,6 +272,7 @@ svg .mutf{fill:var(--muted)}
 :root[data-print="bw"] .thead{background:#fff;border:2px solid #000}
 :root[data-print="bw"] .callout{background:#fff!important;border:1.5px solid #000}
 :root[data-print="bw"] .callout .lab{background:#fff!important;color:#000!important;border:1.5px solid #000}
+:root[data-print="bw"] .callout.star .lab,:root[data-print="bw"] .callout.tip .lab{border:0}
 :root[data-print="bw"] .hl{background:none;font-weight:700;text-decoration:underline}
 :root[data-print="bw"] th{background:#ececec}
 :root[data-print="bw"] .ladder div,:root[data-print="bw"] .flow span{background:#fff;border:1px solid #777}
@@ -292,6 +296,31 @@ svg .mutf{fill:var(--muted)}
   .calc{display:none}
   .pv{display:none!important}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* ---- impeccable polish ---- */
+/* başlık üstü etiket yok: ders etiketi başlığın altında bir defter sekmesi */
+.thead{display:flex;flex-direction:column;align-items:flex-start}
+.thead > .back{order:0}.thead > h1{order:1}.thead > .eyebrow{order:2}.thead > .src{order:3}.thead > .row{order:4}
+.thead > .eyebrow{margin-top:10px;background:var(--c);color:var(--surface)!important;text-transform:none;letter-spacing:0;font-size:13px;font-weight:700;padding:3px 10px 4px;border-radius:6px}
+.tcard .badge{order:0}.tcard h3{order:1}.tcard .num{order:2;font-family:var(--font-b);font-size:13px;font-weight:600;letter-spacing:0}.tcard .read{order:3}.tcard .meta{order:4}.tcard .bar{order:5}
+.today button .big{order:1}.today button .eyebrow{order:2;text-transform:none;letter-spacing:0;font-size:14px;font-weight:600;color:var(--c-rad)}.today button .sub{order:3}.today button .done{order:4}
+.hero{display:flex;flex-direction:column}.hero > h1{order:1}.hero > .date{order:2;margin-top:4px}.hero > p{order:3}.hero > .today{order:4}
+.streak{font-family:var(--font-b);font-weight:700;font-variant-numeric:tabular-nums}
+.steps li::before{font-family:var(--font-b);font-weight:700}
+.tcard .meta,.counter,.result .score,td,.calc .out b{font-variant-numeric:tabular-nums}
+/* tarayıcı yüzeyleri */
+::selection{background:color-mix(in srgb,var(--c-rad) 26%,transparent);color:inherit}
+html{accent-color:var(--c-rad);caret-color:var(--c-rad);scrollbar-color:color-mix(in srgb,var(--ink) 28%,transparent) transparent}
+a{text-underline-offset:3px;text-decoration-thickness:1.5px}
+/* okuma ölçüsü */
+main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > ol:not(.steps){max-width:72ch}
+/* dokunmatik: en az 44px hedef */
+@media (pointer:coarse){
+  .toc button,.pill,.filters button,.presets button,.back{min-height:44px}
+  .back{display:inline-flex;align-items:center}
+  .nav a{min-height:56px;justify-content:center}
+  .pdfc .pbw{min-height:44px}
 }
 
 /* geniş ekran (iPad yatay ve masaüstü) */
@@ -331,7 +360,7 @@ svg .mutf{fill:var(--muted)}
 <main class="wrap view" id="v-home">
   <section class="hero">
     <div class="date" id="today-date">Bugün</div>
-    <h1>Günlük tekrar</h1>
+    <h1 id="hello">Günlük tekrar</h1>
     <p style="color:var(--muted);max-width:60ch">Her gün 12 kart ve 8 soru. Bilmediğin kartlar önce gelir; ikisini de bitirince serin bir gün uzar.</p>
     <div class="today">
       <button id="go-daily-cards"><span class="eyebrow">Hafıza kartları</span><span class="big">Günün 12 kartı</span><span class="sub" id="dc-sub">Tüm konulardan karışık</span><span class="done" id="dc-done" hidden>Bugün tamamlandı</span></button>
@@ -4463,7 +4492,9 @@ function renderHome(){
   }
   document.getElementById("overall").textContent = tk + " / " + tn + " kart öğrenildi";
   const dt = new Date().toLocaleDateString("tr-TR", {weekday:"long", day:"numeric", month:"long"});
-  document.getElementById("today-date").textContent = dt;
+  document.getElementById("today-date").textContent = dt + " · günlük tekrar";
+  const hr = new Date().getHours();
+  document.getElementById("hello").textContent = hr < 5 ? "Gece çalışması" : hr < 12 ? "Günaydın" : hr < 18 ? "İyi çalışmalar" : "İyi akşamlar";
   renderHomeToday();
 }
 function renderHomeToday(){
@@ -4484,7 +4515,7 @@ document.querySelectorAll("main.view[class*='t-']").forEach(m => {
   });
 });
 function syncReadButtons(){
-  document.querySelectorAll(".readbtn").forEach(b => { const on = readSet.has(b.dataset.read); b.setAttribute("aria-pressed", on); b.textContent = on ? "Okundu ✓" : "Okudum olarak işaretle"; });
+  document.querySelectorAll(".readbtn").forEach(b => { const on = readSet.has(b.dataset.read); b.setAttribute("aria-pressed", on); b.textContent = on ? "Okundu" : "Okudum olarak işaretle"; });
 }
 document.querySelectorAll(".readbtn").forEach(b => b.addEventListener("click", () => {
   const id = b.dataset.read; readSet.has(id) ? readSet.delete(id) : readSet.add(id); store.set("read", [...readSet]); syncReadButtons();
