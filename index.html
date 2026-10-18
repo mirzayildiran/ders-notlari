@@ -661,6 +661,8 @@ section.exam > h1{font-size:clamp(28px,6vw,40px);margin-top:22px;max-width:18ch}
   .brand{font-size:17px}
 }
 
+.result{display:flex;flex-direction:column;align-items:center}
+.result .score{order:1}.result .eyebrow{order:2;margin-top:12px;text-transform:none;letter-spacing:.02em;font-size:16px}.result > p{order:3}.result .wrong-list{order:4;align-self:stretch}.result .row{order:5}
 /* siyah-beyaz baskı: işaretler renksiz de okunur */
 :root[data-print="bw"]{--form:#000;--pen-red:#000;--pen-blue:#000}
 
@@ -3616,7 +3618,7 @@ section.exam > h1{font-size:clamp(28px,6vw,40px);margin-top:22px;max-width:18ch}
     <div class="eyebrow">Deste bitti</div>
     <div class="score" id="fc-score">12/12</div>
     <p id="fc-msg" style="color:var(--muted)"></p>
-    <div class="row"><button class="btn" id="fc-restart" style="background:var(--c-rad)">Yeniden karıştır</button><button class="btn ghost" id="fc-undo2" type="button" hidden>Son kartı geri al</button><a class="btn ghost" href="#bugun" style="text-decoration:none">Ana sayfa</a></div>
+    <div class="row"><button class="btn" id="fc-restart">Yeniden karıştır</button><button class="btn ghost" id="fc-undo2" type="button" hidden>Son kartı geri al</button><a class="btn ghost" href="#bugun" style="text-decoration:none">Ana sayfa</a></div>
   </div>
 </main>
 
@@ -3639,7 +3641,7 @@ section.exam > h1{font-size:clamp(28px,6vw,40px);margin-top:22px;max-width:18ch}
     <div class="score" id="q-score">0/8</div>
     <p id="q-msg" style="color:var(--muted)"></p>
     <ol class="wrong-list" id="q-wrong"></ol>
-    <div class="row"><button class="btn" id="q-restart" style="background:var(--c-rad)">Yeni sorular</button><a class="btn ghost" href="#bugun" style="text-decoration:none">Ana sayfa</a></div>
+    <div class="row"><button class="btn" id="q-restart">Yeni sorular</button><a class="btn ghost" href="#bugun" style="text-decoration:none">Ana sayfa</a></div>
   </div>
 </main>
 
