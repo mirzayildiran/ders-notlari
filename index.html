@@ -1,33 +1,33 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="manifest.webmanifest"><meta name="apple-mobile-web-app-title" content="Ders Notları"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#F6F8F7" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#0E1719" media="(prefers-color-scheme: dark)"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Eda'nın Ders Notları</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500&family=Caveat:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500&family=Caveat:wght@600;700&display=swap">
 <style>
 :root{
-  --bg:#F5EFE6; --surface:#FFFCF7; --surface-2:#FAF4EA; --ink:#2B2420; --muted:#6A5E55; --line:#E3D8C8;
-  --c-sinaps:#6A48C2; --c-oss:#0B8577; --c-kas:#CF3F55; --c-sinir1:#2C66D1; --c-sinir2:#B26F08; --c-rad:#A92C7A; --c-hucre:#4F7F12; --c-pss1:#B5471C; --c-kafa:#8A5A22; --c-boyun:#1F7A99; --c-his1:#4A5A80; --c-his2:#8E3FA8; --c-epitel:#7C6A0A;
-  --good:#1D8449; --bad:#C23636;
+  --bg:#F6F8F7; --surface:#FFFFFF; --surface-2:#EEF5F4; --ink:#14202A; --muted:#4A5E66; --line:#C6DCDD; --form:#0F7A84; --pen-red:#D7262F; --pen-blue:#2149C4;
+  --c-sinaps:#0F7A84; --c-oss:#0F7A84; --c-kas:#0F7A84; --c-sinir1:#0F7A84; --c-sinir2:#0F7A84; --c-rad:#0F7A84; --c-hucre:#0F7A84; --c-pss1:#0F7A84; --c-kafa:#0F7A84; --c-boyun:#0F7A84; --c-his1:#0F7A84; --c-his2:#0F7A84; --c-epitel:#0F7A84;
+  --good:#2149C4; --bad:#D7262F;
   --c:var(--c-sinir1);
-  --font-d:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --font-d:"Archivo Narrow", "Arial Narrow", "Avenir Next Condensed", system-ui, sans-serif;
   --font-b:"Source Sans 3", -apple-system, "Segoe UI", system-ui, sans-serif;
   --font-m:"JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
   --font-h:"Caveat", "Bradley Hand", "Segoe Print", cursive;
-  --r:14px;
+  --r:4px;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     color-scheme:dark;
-    --bg:#181412; --surface:#221D19; --surface-2:#2A241F; --ink:#F1E9DF; --muted:#B5A799; --line:#3B332C;
-    --c-sinaps:#A88EF3; --c-oss:#3FC3B3; --c-kas:#F27C8C; --c-sinir1:#78A3F6; --c-sinir2:#E9B152; --c-rad:#E47DBB; --c-hucre:#A2CC5C; --c-pss1:#F0936A; --c-kafa:#E0A866; --c-boyun:#6CC4E0; --c-his1:#9FB0D8; --c-his2:#D59BEA; --c-epitel:#D8C25A;
-    --good:#4EC47F; --bad:#F27575;
+    --bg:#0E1719; --surface:#142124; --surface-2:#192B2F; --ink:#E6EEF0; --muted:#9DB3B8; --line:#2A4347; --form:#5BBCC4; --pen-red:#FF6F74; --pen-blue:#8EA8FF;
+    --c-sinaps:#5BBCC4; --c-oss:#5BBCC4; --c-kas:#5BBCC4; --c-sinir1:#5BBCC4; --c-sinir2:#5BBCC4; --c-rad:#5BBCC4; --c-hucre:#5BBCC4; --c-pss1:#5BBCC4; --c-kafa:#5BBCC4; --c-boyun:#5BBCC4; --c-his1:#5BBCC4; --c-his2:#5BBCC4; --c-epitel:#5BBCC4;
+    --good:#8EA8FF; --bad:#FF6F74;
   }
 }
 :root[data-theme="dark"]{
   color-scheme:dark;
-  --bg:#181412; --surface:#221D19; --surface-2:#2A241F; --ink:#F1E9DF; --muted:#B5A799; --line:#3B332C;
-  --c-sinaps:#A88EF3; --c-oss:#3FC3B3; --c-kas:#F27C8C; --c-sinir1:#78A3F6; --c-sinir2:#E9B152; --c-rad:#E47DBB; --c-hucre:#A2CC5C; --c-pss1:#F0936A; --c-kafa:#E0A866; --c-boyun:#6CC4E0; --c-his1:#9FB0D8; --c-his2:#D59BEA; --c-epitel:#D8C25A;
-  --good:#4EC47F; --bad:#F27575;
+  --bg:#0E1719; --surface:#142124; --surface-2:#192B2F; --ink:#E6EEF0; --muted:#9DB3B8; --line:#2A4347; --form:#5BBCC4; --pen-red:#FF6F74; --pen-blue:#8EA8FF;
+  --c-sinaps:#5BBCC4; --c-oss:#5BBCC4; --c-kas:#5BBCC4; --c-sinir1:#5BBCC4; --c-sinir2:#5BBCC4; --c-rad:#5BBCC4; --c-hucre:#5BBCC4; --c-pss1:#5BBCC4; --c-kafa:#5BBCC4; --c-boyun:#5BBCC4; --c-his1:#5BBCC4; --c-his2:#5BBCC4; --c-epitel:#5BBCC4;
+  --good:#8EA8FF; --bad:#FF6F74;
 }
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--font-b);font-size:17px;line-height:1.55;-webkit-text-size-adjust:100%}
@@ -330,8 +330,7 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
 .sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .streak[hidden]{display:none}
 /* ana sayfa: sınav odaklı */
-.hero h1{font-size:clamp(34px,8.5vw,48px)}
-.exam > h2{margin-top:26px}
+section.exam > h2{margin-top:26px}
 .exam-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:12px}
 .exam-tabs button{display:flex;flex-direction:column;align-items:flex-start;gap:3px;text-align:left;border:1px solid var(--line);background:transparent;border-radius:12px;padding:10px 12px 11px;min-height:64px;color:var(--muted)}
 .exam-tabs button b{font-family:var(--font-d);font-size:17px;color:var(--ink);font-weight:700}
@@ -404,7 +403,7 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
   .exam-pdfs{grid-template-columns:1fr 1fr}
 }
 .tcard:has(.badge) h3{padding-right:56px}
-@media print{ .exam,.daily{display:none!important} }
+@media print{ section.exam,.daily{display:none!important} }
 
 /* geniş ekran (iPad yatay ve masaüstü) */
 @media (min-width:900px){
@@ -423,6 +422,248 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;scroll-behavior:auto!important}
 }
+/* ==== Diş şeması dünyası (2026-10-19) ==== */
+:root{--r:4px}
+body{background:var(--bg)}
+h1{font-weight:700;letter-spacing:-.01em}
+h1,h2,h3{font-family:var(--font-d)}
+h2{font-weight:700;letter-spacing:0}
+::selection{background:color-mix(in srgb,var(--pen-blue) 22%,transparent)}
+html{accent-color:var(--form);caret-color:var(--pen-blue)}
+button:focus-visible,a:focus-visible,[tabindex]:focus-visible,input:focus-visible{outline:2.5px solid var(--pen-blue);outline-offset:2px}
+.fdi{font-family:var(--font-d);font-weight:700;color:var(--form);font-variant-numeric:tabular-nums;letter-spacing:.01em}
+/* föy başlık şeridi */
+.topbar{background:var(--bg);backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:2px solid var(--form);view-transition-name:topbar}
+.brand{font-weight:700;font-size:19px;letter-spacing:0}
+.brand small{font-family:var(--font-d);text-transform:uppercase;letter-spacing:.06em;color:var(--form);font-size:12.5px}
+.streak{font-family:var(--font-d);font-weight:600;border-radius:2px;border:1px solid var(--form);color:var(--form);background:transparent;letter-spacing:.02em}
+.nav{border-top:2px solid var(--form);background:var(--bg);view-transition-name:bnav}
+.nav a{font-family:var(--font-d);font-size:14px;letter-spacing:.02em}
+.nav a[aria-current="page"]{color:var(--ink)}
+.nav a[aria-current="page"] svg{stroke:var(--pen-blue)}
+/* ana sayfa */
+.hero{padding-block:22px 0}
+.hero .date{font-family:var(--font-d);color:var(--form);text-transform:uppercase;letter-spacing:.06em;font-size:14px}
+section.exam > h2{margin-top:20px}
+.chart{margin:10px 0 0}
+.chart svg{display:block;width:100%;height:auto;max-width:640px;margin:0 auto;overflow:visible;touch-action:manipulation}
+.chart .mid{stroke:var(--form);stroke-width:1.5}
+.chart .qlab{font-family:var(--font-d);font-size:15px;font-weight:600;fill:var(--muted);letter-spacing:.04em;text-transform:uppercase;cursor:pointer}
+.chart .qlab.on{fill:var(--form);font-weight:700}
+.chart .tooth rect{fill:var(--surface);stroke:var(--line);stroke-width:2;transition:fill .3s,stroke .3s}
+.chart .sock rect{fill:none;stroke:var(--line);stroke-dasharray:4 4;stroke-width:1.5}
+.chart .les rect{stroke-width:3}
+.chart .st-todo rect{stroke:var(--pen-red)}
+.chart .st-part rect{stroke:var(--pen-blue)}
+.chart .st-part rect.hatch{fill:url(#hatch);stroke:none}
+.chart .hl-line{stroke:var(--pen-blue);stroke-width:2.2}
+.chart .st-done rect{fill:var(--pen-blue);stroke:var(--pen-blue)}
+.chart .tn{font-family:var(--font-d);font-size:14px;font-weight:700;fill:var(--ink);text-anchor:middle;dominant-baseline:middle}
+.chart .les.on .tn{fill:var(--ink)}
+.chart .flag{fill:var(--pen-red);stroke:var(--pen-red);stroke-width:2;stroke-linejoin:round}
+.chart .tb{transition:transform .25s cubic-bezier(.2,.7,.2,1)}
+.chart a.les:hover .tb,.chart a.les:focus-visible .tb{transform:translateY(calc(var(--o) * 5px))}
+.chart a.les:focus{outline:none}
+.chart a.les:focus-visible rect{stroke-width:4.5}
+.chart.anim .tb{animation:t-rise .55s cubic-bezier(.2,.8,.2,1) var(--d) both}
+.chart.anim .les rect:not(.hatch){animation:t-pen .7s cubic-bezier(.4,.2,.2,1) calc(var(--d) + 280ms) both;stroke-dasharray:200;stroke-dashoffset:0}
+.chart.anim .st-done rect{animation:t-fill .5s ease-out calc(var(--d) + 380ms) both}
+@keyframes t-rise{from{opacity:0;transform:translateY(calc(var(--o) * 18px))}to{opacity:1;transform:none}}
+@keyframes t-pen{from{stroke-dashoffset:200}to{stroke-dashoffset:0}}
+@keyframes t-fill{from{fill-opacity:0}to{fill-opacity:1}}
+.chart-cap{text-align:center;font-family:var(--font-d);font-size:16px;color:var(--ink);min-height:1.5em;margin:4px 0 0;letter-spacing:.01em}
+.legend-chart{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;font-size:13.5px;color:var(--muted);margin-top:6px}
+.legend-chart span{display:inline-flex;align-items:center;gap:5px}
+.legend-chart svg,.lrow .mk svg{width:18px;height:18px;flex:none}
+.m-todo{fill:none;stroke:var(--pen-red);stroke-width:2.4}
+.m-part{fill:none;stroke:var(--pen-blue);stroke-width:2.4}
+.m-hatch{stroke:var(--pen-blue);stroke-width:2}
+.m-done{fill:var(--pen-blue);stroke:var(--pen-blue);stroke-width:2.4}
+.m-sock{fill:none;stroke:var(--line);stroke-width:1.6;stroke-dasharray:3 3}
+.legend-chart .flag{fill:var(--pen-red);stroke:var(--pen-red);stroke-width:1.5;stroke-linejoin:round}
+.exam-tabs{gap:0;border:1.5px solid var(--form);border-radius:var(--r);margin-top:16px;overflow:hidden}
+.exam-tabs button{border:0;border-right:1px solid var(--line);border-radius:0;background:var(--surface);min-height:62px;padding:9px 12px;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:9px;align-items:baseline}
+.exam-tabs button:last-child{border-right:0}
+.exam-tabs button::before{content:attr(data-q);grid-row:1 / span 2;font-family:var(--font-d);font-weight:700;font-size:30px;line-height:1;color:var(--line)}
+.exam-tabs button b{font-size:18px;color:var(--muted)}
+.exam-tabs button small{grid-column:2;font-size:13px;color:var(--muted)}
+.exam-tabs button[aria-selected="true"]{background:var(--form);border:0;color:var(--surface)}
+.exam-tabs button[aria-selected="true"]::before,.exam-tabs button[aria-selected="true"] b,.exam-tabs button[aria-selected="true"] small{color:var(--surface)}
+.strip{display:none!important}
+.exam-panel{animation:p-in .35s cubic-bezier(.2,.7,.2,1) both}
+@keyframes p-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.exam-panel .grid{display:block;border-top:2px solid var(--form)}
+.lrow{display:grid;grid-template-columns:44px 1fr auto;gap:4px 12px;align-items:center;padding:12px 4px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);position:relative;transition:background .2s}
+.lrow:hover{background:var(--surface-2)}
+.lrow .fdi{font-size:26px;line-height:1}
+.lrow.st-todo .fdi{color:var(--pen-red)}
+.lrow.st-done .fdi{color:var(--pen-blue)}
+.lrow h3{margin:0;font-size:19px;font-weight:600}
+.lrow .meta{display:block;font-size:14px;color:var(--muted);margin-top:2px;font-variant-numeric:tabular-nums}
+.lrow .mk{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;color:var(--muted)}
+.lrow .mk span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.lrow .badge{grid-column:2;justify-self:start;font-family:var(--font-h);font-size:20px;line-height:1;color:var(--pen-red);background:none;padding:0;text-transform:none;letter-spacing:0;position:static}
+.exam-pdfs{gap:0;border:1.5px solid var(--ink);border-radius:var(--r);overflow:hidden}
+.exam-pdfs .pdfc{border:0;border-radius:0;background:var(--surface)}
+.exam-pdfs .pdfc + .pdfc{border-left:1px solid var(--line)}
+.pdfc .pmain b{font-family:var(--font-d);font-size:19px;font-weight:700}
+.pdfc .pmain .dl{color:var(--form);text-decoration:none;font-family:var(--font-d);font-weight:700;letter-spacing:.03em;text-transform:uppercase;font-size:14px}
+.pdfc .pbw{background:var(--surface-2);font-family:var(--font-d);font-size:14.5px;letter-spacing:.02em}
+.exam-go .btn,.btn{border-radius:var(--r);font-family:var(--font-d);font-size:17px;letter-spacing:.02em}
+.btn{background:var(--ink);color:var(--surface)}
+.btn.ghost{background:var(--surface);color:var(--ink);border:1.5px solid var(--ink)}
+.exam-h{font-size:20px}
+.daily{border-top:2px solid var(--form)}
+.today button{border-radius:var(--r);border:1.5px solid var(--line);background:var(--surface)}
+.today .big{font-family:var(--font-d);font-size:22px}
+.today button .eyebrow{color:var(--form)!important}
+.today .done{color:var(--pen-blue)}
+.howto{border-radius:var(--r);border:1px dashed var(--form);background:transparent}
+/* konu: föy başı */
+.thead{background:var(--surface);border-radius:0;border-bottom:2px solid var(--form)}
+:root[data-print="bw"] .face.front{background:#fff}
+.thead h1 .fdi{font-size:.82em;margin-right:4px;color:var(--form)}
+.thead > .eyebrow{background:transparent!important;color:var(--form)!important;border:1.5px solid var(--form);border-radius:2px;font-family:var(--font-d);font-size:14px;letter-spacing:.03em;padding:2px 9px}
+.back{color:var(--form);font-family:var(--font-d);letter-spacing:.03em}
+main.view[class*="t-"] h2[data-n]::before{content:attr(data-n);font-family:var(--font-d);font-weight:600;color:var(--form);font-size:.78em;margin-right:.55em;font-variant-numeric:tabular-nums}
+.toc button{border-radius:2px;font-family:var(--font-d);font-size:15px;letter-spacing:.01em;color:var(--muted)}
+.toc button[data-n]::before{content:attr(data-n);color:var(--form);margin-right:7px;font-weight:700}
+.toc button[aria-current="true"]{background:var(--surface);color:var(--ink);border-color:var(--pen-blue);font-weight:700}
+.toc button[aria-current="true"][data-n]::before{color:var(--pen-blue)}
+/* kutular */
+.callout{border-radius:var(--r)}
+.callout .lab{font-family:var(--font-d);font-size:14px;letter-spacing:.05em;border-radius:2px;font-weight:700}
+.callout.exam{background:var(--surface);border:2px solid var(--pen-red)}
+.callout.exam .lab{background:var(--pen-red);color:var(--surface)}
+.callout.exam li::marker{color:var(--pen-red);font-family:var(--font-d);font-weight:700}
+.callout.star{background:var(--surface);border:1.5px dashed var(--pen-blue)}
+.callout.star .lab,.callout.tip .lab{color:var(--pen-blue)!important;font-size:24px}
+.callout.tip{background:var(--surface-2);border:1px dashed var(--form)}
+.callout.warn{background:var(--surface);border:1.5px solid var(--pen-red)}
+.callout.warn .lab{background:transparent;color:var(--pen-red);border:1.5px solid var(--pen-red)}
+.hl{background:none;padding:0;text-decoration:underline;text-decoration-color:var(--pen-red);text-decoration-thickness:2px;text-underline-offset:4px;font-weight:600}
+li::marker{color:var(--form)}
+.box,.fig,.tbl,.calc,.steps li,.nt details,.formula{border-radius:var(--r)}
+.tbl{border-color:var(--form)}
+th{font-family:var(--font-d);font-size:15px;letter-spacing:.02em;background:var(--surface-2);color:var(--ink)}
+.steps li::before{border-radius:2px;background:var(--surface);color:var(--form);border:1.5px solid var(--form);font-family:var(--font-d)}
+.nt summary{font-family:var(--font-d)}
+.ladder div,.layers div,.flow span{border-radius:2px}
+.tend{border-top:2px solid var(--form)}
+.pill{border-radius:2px;border-color:var(--form);font-family:var(--font-d);font-size:15px;letter-spacing:.02em}
+.readbtn[aria-pressed="true"]{background:var(--pen-blue);border-color:var(--pen-blue);color:var(--surface)}
+/* kartlar */
+.filters button{border-radius:2px;font-family:var(--font-d);font-size:15px;letter-spacing:.02em}
+.filters button.on{background:var(--form);border-color:var(--form);color:var(--surface)}
+.filters .frow.sub button.on{background:var(--ink);border-color:var(--ink);color:var(--surface)}
+.prog{border-radius:0;height:4px}
+.prog i{background:var(--pen-blue)}
+.face{border-radius:6px;border:1.5px solid var(--form);background:var(--surface)}
+.face.front{background:linear-gradient(var(--pen-red),var(--pen-red)) 0 56px / 100% 1.5px no-repeat,var(--surface)}
+.face.back{background:var(--surface-2)}
+.face .top{color:var(--form);font-family:var(--font-d);font-size:14px;letter-spacing:.04em;text-transform:uppercase;min-height:26px}
+.face .q{font-family:var(--font-d);font-weight:700}
+.face .a{color:var(--ink)}
+.fc-ctl .know{background:var(--pen-blue);color:var(--surface)}
+.fc-ctl .again{border:1.5px solid var(--pen-red);color:var(--pen-red);background:var(--surface)}
+.fc-ctl .reveal{background:var(--ink);color:var(--surface)}
+.flash{position:relative}
+.flash::after{content:attr(data-stamp);position:absolute;top:18px;right:18px;font-family:var(--font-d);font-weight:700;font-size:22px;letter-spacing:.06em;text-transform:uppercase;padding:4px 12px;border:3px solid currentColor;border-radius:6px;opacity:0;transform:rotate(-8deg) scale(1.4);pointer-events:none}
+.flash.out-k::after{color:var(--pen-blue);animation:stamp .3s cubic-bezier(.2,.8,.2,1) forwards}
+.flash.out-a::after{color:var(--pen-red);animation:stamp .3s cubic-bezier(.2,.8,.2,1) forwards}
+.flash.out-k{animation:out-r .3s cubic-bezier(.5,0,.75,0) forwards}
+.flash.out-a{animation:out-l .3s cubic-bezier(.5,0,.75,0) forwards}
+.flash.in{animation:card-in .32s cubic-bezier(.2,.8,.2,1)}
+@keyframes stamp{to{opacity:1;transform:rotate(-8deg) scale(1)}}
+@keyframes out-r{20%{transform:none}to{transform:translateX(70px) rotate(4deg);opacity:0}}
+@keyframes out-l{20%{transform:none}to{transform:translateX(-70px) rotate(-4deg);opacity:0}}
+@keyframes card-in{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}
+/* test */
+.qcard,.result{border-radius:6px;border:1.5px solid var(--form)}
+.qcard .top{font-family:var(--font-d);font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--form)}
+.qcard .q{font-family:var(--font-d)}
+.opts button{border-radius:var(--r);background:var(--surface);transition:border-color .2s,background .2s}
+.opts button:not(:disabled):hover{border-color:var(--form)}
+.opts button span{font-family:var(--font-d);font-weight:700;font-size:15px;color:var(--form)}
+.opts button{position:relative}
+.opts button.ok{border-color:var(--line);background:var(--surface)}
+.opts .ring{position:absolute;left:-7px;top:-6px;width:calc(100% + 14px);height:calc(100% + 12px);overflow:visible;pointer-events:none}
+.opts .ring path{fill:none;stroke:var(--pen-blue);stroke-width:2.6;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:pen-draw .6s cubic-bezier(.4,.1,.2,1) .05s forwards}
+.opts button.no{border-color:var(--pen-red);background:var(--surface)}
+.opts button.no div{text-decoration:line-through;text-decoration-color:var(--pen-red);text-decoration-thickness:2px}
+.opts button .qi path{stroke-dasharray:32;stroke-dashoffset:32;animation:pen-draw .4s cubic-bezier(.4,.1,.2,1) .05s forwards}
+@keyframes pen-draw{to{stroke-dashoffset:0}}
+.expl{border-radius:var(--r);background:var(--surface-2)}
+.result .score{font-family:var(--font-d);font-weight:700;position:relative;display:inline-block;padding:10px 26px}
+.result .score::after{content:"";position:absolute;inset:-2px -6px;border:3px solid var(--pen-blue);border-radius:50%;transform:rotate(-4deg);animation:circle-in .7s cubic-bezier(.4,.1,.2,1) .15s both}
+@keyframes circle-in{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+.result .eyebrow{font-family:var(--font-d);color:var(--form);font-size:14px}
+/* şemalar çizilirken */
+.fig svg.drawing text{animation:fade-in .5s ease-out .45s both}
+@keyframes fade-in{from{opacity:0}}
+/* sayfa geçişi */
+::view-transition-old(root){animation:vt-out .16s ease-in both}
+::view-transition-new(root){animation:vt-in .28s cubic-bezier(.2,.7,.2,1) both}
+::view-transition-group(topbar),::view-transition-group(bnav){animation:none}
+@keyframes vt-out{to{opacity:0;transform:translateY(-6px)}}
+@keyframes vt-in{from{opacity:0;transform:translateY(12px)}}
+/* iPad yatay ve masaüstü */
+@media (min-width:900px){
+  section.exam{display:grid;grid-template-columns:minmax(0,1fr) 420px;grid-template-rows:repeat(5,auto) 1fr;column-gap:40px;align-items:start}
+  section.exam > :is(h1,.chart,.chart-cap,.pen-note,.exam-tabs){grid-column:1}
+  section.exam > .exam-panel{grid-column:2;grid-row:1 / span 6;margin-top:24px}
+  section.exam > .pdf-status{grid-column:2}
+  .exam-panel .exam-pdfs{grid-template-columns:1fr 1fr}
+  .chart svg{max-width:600px}
+  main.view[class*="t-"]:not(#v-kartlar):not(#v-test) > .toc{gap:0;border-top:2px solid var(--form)}
+  main.view[class*="t-"]:not(#v-kartlar):not(#v-test) > .toc button{border:0;border-bottom:1px solid var(--line);background:transparent;padding:9px 8px;min-height:0}
+  main.view[class*="t-"]:not(#v-kartlar):not(#v-test) > .toc button[aria-current="true"]{background:var(--surface)}
+  main.view[class*="t-"]:not(#v-kartlar):not(#v-test) > .toc button{border-radius:2px}
+}
+@media (max-width:560px){
+  .exam-tabs{grid-template-columns:1fr 1fr}
+  .exam-tabs button:nth-child(2){border-right:0}
+  .exam-tabs button:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .exam-pdfs .pdfc + .pdfc{border-left:0;border-top:1px solid var(--line)}
+  .chart .tn{font-size:15px}
+  .chart .qlab{font-size:15px}
+  .chart svg{overflow:hidden}
+}
+@media (prefers-reduced-motion:reduce){
+  .opts .ring path{animation:none!important;stroke-dashoffset:0}
+  .chart.anim .tb,.chart.anim .les rect,.exam-panel,.flash,.flash::after,.opts button .qi path,.result .score::after,.fig svg.drawing text{animation:none!important}
+  .opts button .qi path{stroke-dashoffset:0}
+  ::view-transition-old(root),::view-transition-new(root){animation:none}
+}
+@media print{
+  .chart,.chart-cap,.exam-tabs{display:none!important}
+}
+/* ---- bitiş incelemesi düzeltmeleri ---- */
+.topbar .in{gap:14px}
+.fields{display:flex;gap:16px;font-family:var(--font-d);font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--form);white-space:nowrap}
+.fld i{font-style:normal;text-transform:none;letter-spacing:.01em;font-size:15px;font-weight:600;color:var(--ink);border-bottom:1px solid var(--form);padding:0 4px 1px;margin-left:5px;font-variant-numeric:tabular-nums}
+.fields .fld i#streak{font-family:var(--font-d);font-size:15px;font-weight:600;color:var(--ink);border-bottom:1px solid var(--form);padding:0 4px 1px;margin-left:5px}
+section.exam > h1{font-size:clamp(28px,6vw,40px);margin-top:22px;max-width:18ch}
+.chart .hit{fill:transparent!important;stroke:none!important;animation:none!important}
+.chart .les rect:not(.hit){stroke-width:3.2}
+.chart .les:not(.on) rect:not(.hatch):not(.hit){stroke-width:1.8}
+.chart .les:not(.on) .tn{fill:var(--muted);font-weight:500}
+.chart .qlab{fill:var(--muted)}
+.pen-note{display:block;text-align:center;font-family:var(--font-h);font-size:26px;line-height:1.1;color:var(--pen-blue);text-decoration:none;transform:rotate(-1.5deg);margin:2px 0 0}
+.pen-note:hover{text-decoration:underline}
+.qcard{display:flex;flex-direction:column}
+.qcard .top{order:10;margin-top:16px;padding-top:10px;border-top:1px solid var(--line);text-transform:none;letter-spacing:.01em;font-size:14.5px}
+.face .top{order:10;border-top:1px solid var(--line);padding-top:8px;text-transform:none;letter-spacing:.01em;margin-top:6px;min-height:0}
+.face.back{background:var(--surface-2)}
+:root[data-print="bw"] .face.back{background:#fff}
+@media (max-width:560px){
+  .fld-c,.fld-d{display:none}
+  .brand{font-size:17px}
+}
+
+/* siyah-beyaz baskı: işaretler renksiz de okunur */
+:root[data-print="bw"]{--form:#000;--pen-red:#000;--pen-blue:#000}
+
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -434,21 +675,19 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
 
 <header class="topbar">
   <div class="in">
-    <div class="brand">Eda'nın Ders Notları <small>DHF 2. sınıf</small></div>
-    <div class="streak" id="streak" title="Art arda çalışılan gün" hidden>0 gün seri</div>
+    <div class="brand">Eda'nın Ders Notları</div>
+    <div class="fields"><span class="fld fld-c">Föy <i>DHF 2. sınıf</i></span><span class="fld fld-d">Tarih <i id="f-date">—</i></span><span class="fld">Seri <i id="streak" title="Art arda çalışılan gün">0 gün</i></span></div>
   </div>
 </header>
 
 <!-- ============ HOME ============ -->
 <main class="wrap view" id="v-home">
-  <section class="hero">
-    <h1 id="hello">Merhaba</h1>
-    <div class="date" id="today-date">Bugün</div>
-  </section>
-
-  <section class="exam" aria-labelledby="exam-q">
-    <h2 id="exam-q">Hangi sınava çalışıyorsun?</h2>
-    <div class="exam-tabs" role="tablist" aria-labelledby="exam-q">
+  <section class="exam" aria-labelledby="hello">
+    <h1 id="hello">Hangi sınava çalışıyorsun?</h1>
+    <figure class="chart" id="chart" aria-describedby="chart-cap"></figure>
+    <p class="chart-cap" id="chart-cap" aria-live="polite">Her diş bir ders. Dişe dokun, dersi aç.</p>
+    <a class="pen-note" id="pen-note" hidden></a>
+    <div class="exam-tabs" role="tablist" aria-labelledby="hello">
       <button type="button" role="tab" id="tab-fizyoloji" aria-controls="ex-fizyoloji" data-exam="fizyoloji" aria-selected="false" tabindex="-1"><span class="strip" aria-hidden="true"><i class="t-hucre"></i><i class="t-pss1"></i><i class="t-sinaps"></i><i class="t-oss"></i><i class="t-kas"></i><i class="t-sinir1"></i><i class="t-sinir2"></i></span><b>Fizyoloji</b><small>7 ders</small></button><button type="button" role="tab" id="tab-radyoloji" aria-controls="ex-radyoloji" data-exam="radyoloji" aria-selected="false" tabindex="-1"><span class="strip" aria-hidden="true"><i class="t-rad"></i></span><b>Radyoloji</b><small>1 ders</small></button><button type="button" role="tab" id="tab-anatomi" aria-controls="ex-anatomi" data-exam="anatomi" aria-selected="false" tabindex="-1"><span class="strip" aria-hidden="true"><i class="t-kafa"></i><i class="t-boyun"></i></span><b>Anatomi</b><small>2 ders</small></button><button type="button" role="tab" id="tab-histoloji" aria-controls="ex-histoloji" data-exam="histoloji" aria-selected="false" tabindex="-1"><span class="strip" aria-hidden="true"><i class="t-his1"></i><i class="t-his2"></i><i class="t-epitel"></i></span><b>Histoloji</b><small>3 ders</small></button>
     </div>
     <div class="exam-panel" role="tabpanel" id="ex-fizyoloji" aria-labelledby="tab-fizyoloji" hidden>
@@ -3439,8 +3678,21 @@ const TMAP = Object.fromEntries(TOPICS.map(t => [t.id, t]));
 const SUBJECTS = [{id:"fizyoloji", name:"Fizyoloji", topics:["hucre", "pss1", "sinaps", "oss", "kas", "sinir1", "sinir2"]},{id:"radyoloji", name:"Radyoloji", topics:["rad"]},{id:"anatomi", name:"Anatomi", topics:["kafa", "boyun"]},{id:"histoloji", name:"Histoloji", topics:["his1", "his2", "epitel"]}];
 const SMAP = Object.fromEntries(SUBJECTS.map(s => [s.id, s]));
 const T2S = {}; SUBJECTS.forEach(s => s.topics.forEach(t => { T2S[t] = s.id; }));
+const QUAD = {fizyoloji:1, radyoloji:2, anatomi:3, histoloji:4};
+const FDI = {}; SUBJECTS.forEach(s => s.topics.forEach((t, i) => { FDI[t] = QUAD[s.id] * 10 + i + 1; }));
+const STATE_TXT = {todo:"çalışılacak", part:"başlandı", done:"okundu"};
+const MARK = {
+  todo:'<svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="3" class="m-todo"/></svg>',
+  part:'<svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="3" class="m-part"/><path d="M3 13l10-10M7 17l10-10" class="m-hatch"/></svg>',
+  done:'<svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="3" class="m-done"/></svg>'
+};
 function topicsOf(mode){ return mode.startsWith("s:") ? SMAP[mode.slice(2)].topics : [mode]; }
-const MARK_OK = '<svg class="qi" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+function penRing(b){
+  const w = b.offsetWidth + 14, t = b.offsetHeight + 12, f = n => n.toFixed(1);
+  return '<svg class="ring" viewBox="0 0 ' + w + ' ' + t + '" aria-hidden="true"><path pathLength="1" d="M' + f(w * .52) + ' 3C' + f(w * .84) + ' 3 ' + f(w - 3) + ' ' + f(t * .22) + ' ' + f(w - 3) + ' ' + f(t * .5) +
+    'C' + f(w - 3) + ' ' + f(t * .8) + ' ' + f(w * .8) + ' ' + f(t - 3) + ' ' + f(w * .5) + ' ' + f(t - 3) + 'C' + f(w * .18) + ' ' + f(t - 3) + ' 3 ' + f(t * .8) + ' 3 ' + f(t * .5) +
+    'C3 ' + f(t * .2) + ' ' + f(w * .2) + ' 3 ' + f(w * .52) + ' 3"/></svg>';
+}
 const MARK_NO = '<svg class="qi" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>';
 
 const CARDS = {
@@ -4651,7 +4903,7 @@ function streakCount(){
   while(doneOn(dayKey(cur))){ n++; cur.setDate(cur.getDate()-1); }
   return n;
 }
-function renderStreak(){ const n = streakCount(), el = document.getElementById("streak"); el.textContent = n + " gün seri"; el.hidden = n === 0; }
+function renderStreak(){ const n = streakCount(), el = document.getElementById("streak"); el.textContent = n + " gün"; }
 
 /* ---------- home ---------- */
 function topicProgress(id){ const cs = ALLCARDS.filter(c => c.t === id); const k = cs.filter(c => known.has(c.id)).length; const qq = QUIZ.filter(q => q.t === id); return {k, n:cs.length, qn:qq.length, qk:qq.filter(q => qok.has(q.id)).length}; }
@@ -4661,23 +4913,21 @@ function renderHome(){
     const g = document.querySelector('[data-grid="' + s.id + '"]'); g.innerHTML = "";
     for(const id of s.topics){
       const t = TMAP[id], p = topicProgress(id); tk += p.k; tn += p.n;
-      const a = document.createElement("a"); a.href = "#"+id; a.className = "tcard t-"+id;
-      const started = p.k || p.qk;
-      a.innerHTML = (t.badge ? '<span class="badge">'+t.badge+'</span>' : '') +
-        '<span class="num">'+t.num+'</span><h3>'+t.title+'</h3>' +
-        (readSet.has(id) ? '<span class="read">Okundu</span>' : '') +
-        '<div class="meta"><span>'+(started ? p.k+'/'+p.n+' kart · '+p.qk+'/'+p.qn+' soru' : p.n+' kart · '+p.qn+' soru')+'</span></div>' +
-        '<div class="bar"><i style="width:'+(p.n ? Math.round(p.k/p.n*100) : 0)+'%"></i></div>';
+      const a = document.createElement("a"); a.href = "#"+id; a.className = "lrow st-" + topicState(id);
+      const started = p.k || p.qk, st = topicState(id);
+      a.innerHTML = '<span class="fdi">'+FDI[id]+'</span><span class="lt"><h3>'+t.title+'</h3>' +
+        '<span class="meta">'+t.num.split(" · ").slice(1).join(" · ")+' · '+(started ? p.k+'/'+p.n+' kart · '+p.qk+'/'+p.qn+' soru' : p.n+' kart · '+p.qn+' soru')+'</span></span>' +
+        '<span class="mk">'+MARK[st]+'<span>'+STATE_TXT[st]+'</span></span>' +
+        (t.badge ? '<span class="badge">'+t.badge+'</span>' : '');
       g.appendChild(a);
     }
   }
   document.getElementById("overall").textContent = tk + " / " + tn + " kart öğrenildi";
-  const dt = new Date().toLocaleDateString("tr-TR", {weekday:"long", day:"numeric", month:"long"});
-  document.getElementById("today-date").textContent = dt;
-  const hr = new Date().getHours();
-  document.getElementById("hello").textContent = hr < 5 ? "Gece çalışması" : hr < 12 ? "Günaydın" : hr < 18 ? "İyi çalışmalar" : "İyi akşamlar";
+  const hr = new Date().getHours(), greet = hr < 5 ? "İyi geceler" : hr < 12 ? "Günaydın" : hr < 18 ? "İyi çalışmalar" : "İyi akşamlar";
+  document.getElementById("hello").textContent = greet + ", hangi sınava çalışıyorsun?";
   setExam(store.get("exam", "fizyoloji"));
   renderHomeToday();
+  renderChart(true);
 }
 function setExam(id, focus){
   if(!SMAP[id]) id = "fizyoloji";
@@ -4686,6 +4936,7 @@ function setExam(id, focus){
     const on = b.dataset.exam === id; b.setAttribute("aria-selected", on); b.tabIndex = on ? 0 : -1; if(on && focus) b.focus();
   });
   document.querySelectorAll(".exam-panel").forEach(p => { p.hidden = p.id !== "ex-" + id; });
+  renderChart(false);
 }
 document.querySelectorAll('.exam-tabs [role="tab"]').forEach((b, i, all) => {
   b.addEventListener("click", () => setExam(b.dataset.exam));
@@ -4702,11 +4953,92 @@ function renderHomeToday(){
   document.getElementById("dc-sub").textContent = unknown + " kart henüz işaretlenmedi";
 }
 
+
+/* ---------- diş şeması (odontogram) ---------- */
+function topicState(id){
+  const p = topicProgress(id);
+  if(readSet.has(id) || (p.n && p.k / p.n >= .8)) return "done";
+  return (p.k || p.qk) ? "part" : "todo";
+}
+const TOOTH_W = [1, .88, 1, 1.05, 1.05, 1.32, 1.32, 1.2], TOOTH_H = [44, 41, 48, 40, 40, 36, 36, 34];
+const CODE2T = {}; Object.keys(FDI).forEach(t => { CODE2T[FDI[t]] = t; });
+function renderChart(animate){
+  const el = document.getElementById("chart"); if(!el) return;
+  const cur = QUAD[store.get("exam", "fizyoloji")] || 1, last = store.get("last", null);
+  const cx = 320, rx = 282, ry = 148, top = 196, bot = 236, tot = TOOTH_W.reduce((a, b) => a + b, 0), span = 80 * Math.PI / 180;
+  const names = {1:"Fizyoloji", 2:"Radyoloji", 3:"Anatomi", 4:"Histoloji"};
+  const small = matchMedia("(max-width:560px)").matches;
+  const VB = {1:"0 0 322 222", 2:"318 0 322 222", 3:"318 210 322 222", 4:"0 210 322 222"};
+  let s = '<svg viewBox="' + (small ? VB[cur] : "0 0 640 432") + '" role="group" aria-label="Diş şeması: her kadran bir ders, her diş bir konu">' +
+    '<defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" class="hl-line"/></pattern></defs>' +
+    '<line class="mid" x1="320" y1="14" x2="320" y2="418"/><line class="mid" x1="16" y1="216" x2="624" y2="216"/>';
+  const lab = [[1, 18, 26, "start"], [2, 622, 26, "end"], [3, 622, 420, "end"], [4, 18, 420, "start"]];
+  for(const [q, x, y, an] of lab)
+    s += '<text class="qlab' + (q === cur ? ' on' : '') + '" x="' + x + '" y="' + y + '" text-anchor="' + an + '" data-q="' + q + '">' + q + ' · ' + names[q] + '</text>';
+  let k = 0;
+  for(let q = 1; q <= 4; q++){
+    const upper = q <= 2, side = (q === 1 || q === 4) ? -1 : 1;
+    let acc = 0;
+    for(let i = 0; i < 8; i++){
+      const mid = (acc + TOOTH_W[i] / 2) / tot * span; acc += TOOTH_W[i];
+      const t = side * mid, sx = Math.sin(t), cy = Math.cos(t);
+      const x = cx + rx * sx, y = upper ? top - ry * cy : bot + ry * cy;
+      const rot = (upper ? t : -t) * 180 / Math.PI, w = 25 * TOOTH_W[i], ht = TOOTH_H[i];
+      const ox = sx, oy = upper ? -cy : cy, lx = x + ox * (ht / 2 + 15), ly = y + oy * (ht / 2 + 15);
+      const code = q * 10 + i + 1, tid = CODE2T[code];
+      const shape = '<rect x="' + (-w / 2).toFixed(1) + '" y="' + (-ht / 2) + '" width="' + w.toFixed(1) + '" height="' + ht + '" rx="' + (i < 3 ? 9 : 7) + '"/>';
+      const tf = 'translate(' + x.toFixed(1) + ' ' + y.toFixed(1) + ') rotate(' + rot.toFixed(1) + ')';
+      const d = animate ? (k * 22) : 0; k++;
+      if(tid){
+        const st = topicState(tid), T = TMAP[tid];
+        s += '<a href="#' + tid + '" class="tooth les st-' + st + (q === cur ? ' on' : '') + '" data-t="' + tid + '" style="--d:' + d + 'ms;--o:' + (upper ? -1 : 1) + '" aria-label="' + code + ' ' + T.title + ', ' + STATE_TXT[st] + '">' +
+          '<g transform="' + tf + '"><g class="tb"><rect class="hit" x="' + (-w / 2 - 7).toFixed(1) + '" y="' + (-ht / 2 - 9) + '" width="' + (w + 14).toFixed(1) + '" height="' + (ht + 18) + '"/>' + shape + (st === "part" ? shape.replace('<rect', '<rect class="hatch"') : '') + '</g></g>' +
+          '<text class="tn" x="' + lx.toFixed(1) + '" y="' + ly.toFixed(1) + '">' + code + '</text>' +
+          (last === tid ? '<path class="flag" d="M' + (x - ox * (ht / 2 + 8)).toFixed(1) + ' ' + (y - oy * (ht / 2 + 8) + 10).toFixed(1) + 'v-22l13 5.5-13 5.5"/>' : '') + '</a>';
+      } else {
+        s += '<g class="tooth sock' + (q === cur ? ' on' : '') + '" style="--d:' + d + 'ms;--o:' + (upper ? -1 : 1) + '" aria-hidden="true"><g transform="' + tf + '"><g class="tb">' + shape + '</g></g></g>';
+      }
+    }
+  }
+  s += '</svg>' +
+    '<figcaption class="legend-chart"><span>' + MARK.todo + 'çalışılacak</span><span>' + MARK.part + 'başlandı</span><span>' + MARK.done + 'okundu</span><span><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="3" class="m-sock"/></svg>sonraki dersler</span>' +
+    (last ? '<span><svg viewBox="0 0 20 20" aria-hidden="true"><path class="flag" d="M5 18V2l12 5-12 5"/></svg>kaldığın yer</span>' : '') + '</figcaption>';
+  el.innerHTML = s;
+  const pn = document.getElementById("pen-note");
+  if(pn){ if(last && TMAP[last]){ pn.hidden = false; pn.href = "#" + last; pn.textContent = "kaldığın yer → " + FDI[last] + " " + TMAP[last].title; } else pn.hidden = true; }
+  el.classList.toggle("anim", !!animate);
+  clearTimeout(renderChart.t); if(animate) renderChart.t = setTimeout(() => el.classList.remove("anim"), 1900);
+  const cap = document.getElementById("chart-cap"), base = "Her diş bir ders. Dişe dokun, dersi aç.";
+  el.querySelectorAll(".les").forEach(a => {
+    const say = () => { const id = a.dataset.t; cap.textContent = FDI[id] + " · " + TMAP[id].title + " · " + STATE_TXT[topicState(id)]; };
+    a.addEventListener("pointerenter", say); a.addEventListener("focus", say);
+    a.addEventListener("pointerleave", () => { cap.textContent = base; });
+  });
+  el.querySelectorAll(".qlab").forEach(tx => tx.addEventListener("click", () => {
+    const sid = Object.keys(QUAD).find(k => QUAD[k] === +tx.dataset.q); setExam(sid);
+  }));
+  SUBJECTS.forEach(sb => {
+    const b = document.getElementById("tab-" + sb.id); if(!b) return;
+    b.dataset.q = QUAD[sb.id];
+    const todo = sb.topics.filter(t => topicState(t) === "todo").length;
+    b.querySelector("small").textContent = sb.topics.length + " ders" + (todo ? " · " + todo + " çalışılacak" : " · hepsi başlandı");
+  });
+}
+
+(function(){
+  const fd = document.getElementById("f-date"); if(fd) fd.textContent = new Date().toLocaleDateString("tr-TR", {day:"numeric", month:"long"});
+  const mq = matchMedia("(max-width:560px)"), on = () => { if(!document.getElementById("v-home").hidden) renderChart(false); };
+  if(mq.addEventListener) mq.addEventListener("change", on);
+})();
 /* ---------- topic TOC + read toggle ---------- */
 document.querySelectorAll("main.view[class*='t-']").forEach(m => {
   const toc = m.querySelector(".toc"); if(!toc) return;
+  const tid = m.id.slice(2), code = FDI[tid], h1 = m.querySelector(".thead h1");
+  if(code && h1 && !h1.querySelector(".fdi")) h1.insertAdjacentHTML("afterbegin", '<span class="fdi" aria-label="FDI ' + code + '">' + code + '</span> ');
+  let sec = 0;
   m.querySelectorAll("h2[id]").forEach(h => {
-    const b = document.createElement("button"); b.type = "button"; b.textContent = h.textContent; b.dataset.target = h.id;
+    sec++; if(code) h.dataset.n = code + "." + sec;
+    const b = document.createElement("button"); b.type = "button"; b.textContent = h.textContent; b.dataset.target = h.id; if(code) b.dataset.n = code + "." + sec;
     b.addEventListener("click", () => h.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"}));
     toc.appendChild(b);
   });
@@ -4783,8 +5115,18 @@ function flipCard(){
   const on = flash.classList.toggle("flipped");
   if(on && !area.classList.contains("shown")){ area.classList.add("shown"); document.getElementById("fc-live").textContent = "Cevap: " + document.getElementById("fc-a").textContent; document.getElementById("fc-know").focus({preventScroll:true}); }
 }
+let cardBusy = false;
 function answerCard(isKnown){
-  const c = deck[di]; if(!c || !document.getElementById("fc-area").classList.contains("shown")) return;
+  const c = deck[di]; if(!c || cardBusy || !document.getElementById("fc-area").classList.contains("shown")) return;
+  if(!REDUCE.matches){
+    const fl = document.getElementById("flash"); cardBusy = true;
+    fl.dataset.stamp = isKnown ? "Bildin" : "Tekrar"; fl.classList.add(isKnown ? "out-k" : "out-a");
+    setTimeout(() => { fl.classList.remove("out-k", "out-a"); cardBusy = false; commitCard(c, isKnown); fl.classList.add("in"); setTimeout(() => fl.classList.remove("in"), 320); }, 300);
+    return;
+  }
+  commitCard(c, isKnown);
+}
+function commitCard(c, isKnown){
   lastAns = {id:c.id, was:known.has(c.id), k:isKnown};
   if(isKnown){ known.add(c.id); deckKnownNow++; } else known.delete(c.id);
   const refocus = document.activeElement && document.activeElement.closest && document.activeElement.closest(".fc-ctl");
@@ -4859,7 +5201,7 @@ function showQ(){
   q.o.forEach((o, i) => {
     const b = document.createElement("button"); b.innerHTML = "<span>" + "ABCD"[i] + "</span><div></div>"; b.querySelector("div").textContent = o;
     b.addEventListener("click", () => {
-      [...box.children].forEach((x, j) => { x.disabled = true; if(j === q.a){ x.classList.add("ok"); x.insertAdjacentHTML("beforeend", MARK_OK + '<span class="sr">' + (j === i ? "Senin cevabın, doğru" : "Doğru cevap") + "</span>"); } });
+      [...box.children].forEach((x, j) => { x.disabled = true; if(j === q.a){ x.classList.add("ok"); x.insertAdjacentHTML("beforeend", penRing(x) + '<span class="sr">' + (j === i ? "Senin cevabın, doğru" : "Doğru cevap") + "</span>"); } });
       ex.innerHTML = "<b></b> <span></span>";
       if(i === q.a){ qScore++; qok.add(q.id); ex.querySelector("b").textContent = "Doğru."; ex.querySelector("span").textContent = q.e; }
       else { b.classList.add("no"); b.insertAdjacentHTML("beforeend", MARK_NO + '<span class="sr">Senin cevabın, yanlış</span>'); qok.delete(q.id); qWrong.push(q); ex.querySelector("b").textContent = "Yanlış. Doğru cevap " + "ABCD"[q.a] + "."; ex.querySelector("span").textContent = q.e; }
@@ -4886,12 +5228,20 @@ document.getElementById("q-restart").textContent = "Yeni tur";
 let pending = null, curView = null;
 const scrollPos = (() => { try{ return JSON.parse(sessionStorage.getItem("sd:scroll") || "{}"); }catch(e){ return {}; } })();
 try{ history.scrollRestoration = "manual"; }catch(e){}
+const REDUCE = matchMedia("(prefers-reduced-motion: reduce)");
 function route(){
+  if(document.startViewTransition && !REDUCE.matches && curView !== null && !window.__PRINT && document.visibilityState === "visible"){
+    let done = false; const run = () => { if(done) return; done = true; routeNow(); };
+    const vt = document.startViewTransition(run);
+    setTimeout(() => { if(!done){ try{ vt.skipTransition(); }catch(e){} run(); } }, 250);
+  } else routeNow();
+}
+function routeNow(){
   const h = (location.hash || "#bugun").slice(1);
   if(curView !== null){ scrollPos[curView] = Math.round(window.scrollY); try{ sessionStorage.setItem("sd:scroll", JSON.stringify(scrollPos)); }catch(e){} }
   document.querySelectorAll("main.view").forEach(v => v.hidden = true);
   let navKey = "home";
-  if(TMAP[h]) { document.getElementById("v-"+h).hidden = false; navKey = ""; store.set("exam", T2S[h]); }
+  if(TMAP[h]) { document.getElementById("v-"+h).hidden = false; navKey = ""; store.set("exam", T2S[h]); store.set("last", h); }
   else if(h === "kartlar"){ document.getElementById("v-kartlar").hidden = false; navKey = "kartlar"; buildDeck(pending || (deck.length && di < deck.length ? deckMode : "daily")); }
   else if(h === "test"){ document.getElementById("v-test").hidden = false; navKey = "test"; buildQuiz(pending || "daily"); }
   else { document.getElementById("v-home").hidden = false; renderHome(); }
@@ -5074,6 +5424,25 @@ window.addEventListener("hashchange", route);
   }
   apply();
   if(mq.addEventListener) mq.addEventListener("change", apply);
+})();
+
+
+/* ---------- şemalar görünüme girince çizilir ---------- */
+(function(){
+  if(window.__PRINT || REDUCE.matches || !("IntersectionObserver" in window)) return;
+  const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ io.unobserve(e.target); draw(e.target); } }), {threshold:.3});
+  document.querySelectorAll(".fig svg").forEach(s => io.observe(s));
+  function draw(svg){
+    const els = [...svg.querySelectorAll("path,line,polyline,polygon,rect,circle,ellipse")].filter(el => {
+      if(el.closest("defs,marker,pattern") || typeof el.getTotalLength !== "function") return false;
+      const cs = getComputedStyle(el); return cs.stroke !== "none" && cs.strokeDasharray === "none" && parseFloat(cs.strokeWidth) > 0;
+    }).slice(0, 160);
+    const lens = els.map(el => { try{ return el.getTotalLength(); }catch(err){ return 0; } });
+    els.forEach((el, i) => { if(!lens[i]) return; el.style.transition = "none"; el.style.strokeDasharray = lens[i]; el.style.strokeDashoffset = lens[i]; });
+    svg.classList.add("drawing"); svg.getBoundingClientRect();
+    els.forEach((el, i) => { if(!lens[i]) return; el.style.transition = "stroke-dashoffset .85s cubic-bezier(.3,.6,.2,1) " + Math.min(i * 18, 520) + "ms"; el.style.strokeDashoffset = "0"; });
+    setTimeout(() => { els.forEach(el => { el.style.transition = el.style.strokeDasharray = el.style.strokeDashoffset = ""; }); svg.classList.remove("drawing"); }, 1500);
+  }
 })();
 
 /* ---------- print mode (used to build the PDF files) ---------- */
