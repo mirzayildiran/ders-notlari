@@ -326,6 +326,86 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
   .pdfc .pbw{min-height:44px}
 }
 
+/* ---- critique düzeltmeleri (2026-10-18) ---- */
+.sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.streak[hidden]{display:none}
+/* ana sayfa: sınav odaklı */
+.hero h1{font-size:clamp(34px,8.5vw,48px)}
+.exam > h2{margin-top:26px}
+.exam-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:12px}
+.exam-tabs button{display:flex;flex-direction:column;align-items:flex-start;gap:3px;text-align:left;border:1px solid var(--line);background:transparent;border-radius:12px;padding:10px 12px 11px;min-height:64px;color:var(--muted)}
+.exam-tabs button b{font-family:var(--font-d);font-size:17px;color:var(--ink);font-weight:700}
+.exam-tabs button small{font-size:13px;font-weight:600}
+.exam-tabs button[aria-selected="true"]{background:var(--surface);border:1.5px solid var(--ink);color:var(--ink)}
+.exam-tabs button[aria-selected="false"] b{color:var(--muted)}
+.strip{display:flex;gap:2px;height:5px;width:100%;margin-bottom:4px}
+.strip i{flex:1;border-radius:3px;background:var(--c)}
+.exam-panel{margin-top:14px}
+.exam-pdfs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.exam-pdfs .pdfc > .strip{height:4px;margin:0;gap:0}
+.exam-pdfs .pdfc > .strip i{border-radius:0}
+.pdfc .pmain .dl{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:4px}
+.exam-go{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.exam-go .btn{background:var(--ink);color:var(--bg)}
+.exam-go .btn.ghost{background:var(--surface);color:var(--ink)}
+.exam-h{margin-top:26px;margin-bottom:0;font-size:19px}
+.exam-note{color:var(--muted);font-size:15px;margin:2px 0 12px}
+.daily{margin-top:44px;padding-top:6px;border-top:1px solid var(--line)}
+.daily .sect-title{margin-top:22px}
+.daily .meta{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.daily .lead{color:var(--muted);max-width:60ch;margin-top:0}
+.daily .today{margin-top:12px}
+@media (max-width:560px){
+  .exam-tabs{grid-template-columns:1fr 1fr}
+  .exam-pdfs{grid-template-columns:1fr}
+}
+/* konu başı ve sonu */
+.back svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;margin-left:-3px}
+.tend{align-items:center}
+.tend-pdf{display:flex;flex-wrap:wrap;gap:6px 16px;width:100%;font-size:15px;font-weight:600}
+.tend-pdf a{color:var(--c-ink)}
+.toc button[aria-current="true"]{background:var(--soft-2);color:var(--ink);border-color:color-mix(in srgb,var(--c) 55%,transparent)}
+/* kartlar: önce cevabı gör */
+.fc-ctl .reveal{grid-column:1 / -1;background:var(--ink);color:var(--bg)}
+#fc-area:not(.shown) .fc-ctl .again,#fc-area:not(.shown) .fc-ctl .know{display:none}
+#fc-area.shown .fc-ctl .reveal{display:none}
+.fc-ctl .know{color:var(--surface)}
+.counter{display:flex;justify-content:center;flex-wrap:wrap;gap:4px 14px;align-items:center;min-height:24px}
+.linkbtn{border:0;background:none;padding:4px 2px;font-family:var(--font-b);font-size:14px;font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)}
+/* test: renk dışında işaret */
+.opts button .qi{width:20px;height:20px;flex:none;margin-left:auto;align-self:center;fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.opts button.ok .qi{stroke:var(--good)}
+.opts button.no .qi{stroke:var(--bad)}
+.opts button.ok,.opts button.no{border-width:2px}
+.expl b{font-weight:700}
+.expl.is-ok b{color:color-mix(in srgb,var(--good) 80%,var(--ink))}
+.expl.is-no b{color:color-mix(in srgb,var(--bad) 80%,var(--ink))}
+#q-next{scroll-margin-bottom:96px}
+/* filtreler: dersler, sonra seçili dersin konuları */
+.filters{display:grid;gap:8px;padding:14px 0 6px;overflow:visible}
+.filters .frow{display:flex;gap:8px;overflow-x:auto;padding-inline:16px;scrollbar-width:none}
+.filters .frow::-webkit-scrollbar{display:none}
+.filters .frow.sub button{font-size:13.5px;background:transparent}
+.filters .frow.sub button.on{background:var(--c-ink);border-color:var(--c-ink);color:var(--surface)}
+/* okunaklılık */
+.tcard .badge,.callout .lab{font-size:12px}
+.fig figcaption{max-width:62ch;margin-inline:auto}
+.callout p,.callout ul,.callout ol{max-width:64ch}
+@media (max-width:560px){
+  .tbl{scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--c) 55%,transparent) transparent;
+    background:linear-gradient(to right,var(--surface) 40%,transparent) left / 28px 100% no-repeat local,
+      linear-gradient(to left,var(--surface) 40%,transparent) right / 28px 100% no-repeat local,
+      linear-gradient(to right,color-mix(in srgb,var(--ink) 16%,transparent),transparent) left / 14px 100% no-repeat scroll,
+      linear-gradient(to left,color-mix(in srgb,var(--ink) 16%,transparent),transparent) right / 14px 100% no-repeat scroll,
+      var(--surface)}
+}
+@media (min-width:900px){
+  .fig svg{max-width:660px}
+  .exam-pdfs{grid-template-columns:1fr 1fr}
+}
+.tcard:has(.badge) h3{padding-right:56px}
+@media print{ .exam,.daily{display:none!important} }
+
 /* geniş ekran (iPad yatay ve masaüstü) */
 @media (min-width:900px){
   .wrap,.topbar .in{max-width:1180px}
@@ -355,41 +435,57 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
 <header class="topbar">
   <div class="in">
     <div class="brand">Eda'nın Ders Notları <small>DHF 2. sınıf</small></div>
-    <div class="streak" id="streak" title="Art arda çalışılan gün">0 gün seri</div>
+    <div class="streak" id="streak" title="Art arda çalışılan gün" hidden>0 gün seri</div>
   </div>
 </header>
 
 <!-- ============ HOME ============ -->
 <main class="wrap view" id="v-home">
   <section class="hero">
+    <h1 id="hello">Merhaba</h1>
     <div class="date" id="today-date">Bugün</div>
-    <h1 id="hello">Günlük tekrar</h1>
-    <p style="color:var(--muted);max-width:60ch">Her gün 12 kart ve 8 soru. Bilmediğin kartlar önce gelir; ikisini de bitirince serin bir gün uzar.</p>
+  </section>
+
+  <section class="exam" aria-labelledby="exam-q">
+    <h2 id="exam-q">Hangi sınava çalışıyorsun?</h2>
+    <div class="exam-tabs" role="tablist" aria-labelledby="exam-q">
+      <button type="button" role="tab" id="tab-fizyoloji" aria-controls="ex-fizyoloji" data-exam="fizyoloji" aria-selected="false" tabindex="-1"><span class="strip" aria-hidden="true"><i class="t-hucre"></i><i class="t-pss1"></i><i class="t-sinaps"></i><i class="t-oss"></i><i class="t-kas"></i><i class="t-sinir1"></i><i class="t-sinir2"></i></span><b>Fizyoloji</b><small>7 ders</small></button><button type="button" role="tab" id="tab-radyoloji" aria-controls="ex-radyoloji" data-exam="radyoloji" aria-selected="false" tabindex="-1"><span class="strip" aria-hidden="true"><i class="t-rad"></i></span><b>Radyoloji</b><small>1 ders</small></button><button type="button" role="tab" id="tab-anatomi" aria-controls="ex-anatomi" data-exam="anatomi" aria-selected="false" tabindex="-1"><span class="strip" aria-hidden="true"><i class="t-kafa"></i><i class="t-boyun"></i></span><b>Anatomi</b><small>2 ders</small></button><button type="button" role="tab" id="tab-histoloji" aria-controls="ex-histoloji" data-exam="histoloji" aria-selected="false" tabindex="-1"><span class="strip" aria-hidden="true"><i class="t-his1"></i><i class="t-his2"></i><i class="t-epitel"></i></span><b>Histoloji</b><small>3 ders</small></button>
+    </div>
+    <div class="exam-panel" role="tabpanel" id="ex-fizyoloji" aria-labelledby="tab-fizyoloji" hidden>
+      <div class="exam-pdfs"><div class="pdfc"><span class="strip" aria-hidden="true"><i class="t-hucre"></i><i class="t-pss1"></i><i class="t-sinaps"></i><i class="t-oss"></i><i class="t-kas"></i><i class="t-sinir1"></i><i class="t-sinir2"></i></span><a class="pdf-link pmain" href="ozet-fizyoloji-kisa.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Kisa-Ozet.pdf"><b>Sınav öncesi özeti<span class="sr"> · Fizyoloji</span></b><span>7 dersin sınavlık özeti · 4 sayfa</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-fizyoloji-kisa-sb.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Kisa-Ozet-SB.pdf">Siyah-beyaz baskı</a></div><div class="pdfc"><span class="strip" aria-hidden="true"><i class="t-hucre"></i><i class="t-pss1"></i><i class="t-sinaps"></i><i class="t-oss"></i><i class="t-kas"></i><i class="t-sinir1"></i><i class="t-sinir2"></i></span><a class="pdf-link pmain" href="ozet-fizyoloji.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet.pdf"><b>Ayrıntılı özet<span class="sr"> · Fizyoloji</span></b><span>Hücre, PSS, sinaps, OSS ve refleksler, kas, sinir I–II · şemalı</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-fizyoloji-sb.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet-SB.pdf">Siyah-beyaz baskı</a></div></div>
+      <div class="exam-go"><button class="btn" data-cards="s:fizyoloji">Fizyoloji kartları</button><button class="btn ghost" data-quiz="s:fizyoloji">Fizyoloji testi</button></div>
+      <h3 class="exam-h">Dersler</h3><p class="exam-note">Her ders “Sınavda çıkar · mutlaka bil” kutusuyla açılır.</p>
+      <div class="grid" data-grid="fizyoloji"></div>
+    </div>
+    <div class="exam-panel" role="tabpanel" id="ex-radyoloji" aria-labelledby="tab-radyoloji" hidden>
+      <div class="exam-pdfs"><div class="pdfc t-rad"><span class="strip" aria-hidden="true"><i class="t-rad"></i></span><a class="pdf-link pmain" href="ozet-radyoloji-kisa.pdf" target="_blank" rel="noopener" data-file="Radyoloji-Kisa-Ozet.pdf"><b>Sınav öncesi özeti<span class="sr"> · Radyoloji</span></b><span>Radyasyon fiziği ve EM spektrum · 1 sayfa</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-radyoloji-kisa-sb.pdf" target="_blank" rel="noopener" data-file="Radyoloji-Kisa-Ozet-SB.pdf">Siyah-beyaz baskı</a></div><div class="pdfc t-rad"><span class="strip" aria-hidden="true"><i class="t-rad"></i></span><a class="pdf-link pmain" href="ozet-radyoloji.pdf" target="_blank" rel="noopener" data-file="Radyoloji-Ozet.pdf"><b>Ayrıntılı özet<span class="sr"> · Radyoloji</span></b><span>Radyasyon fiziği ve elektromanyetik radyasyon</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-radyoloji-sb.pdf" target="_blank" rel="noopener" data-file="Radyoloji-Ozet-SB.pdf">Siyah-beyaz baskı</a></div></div>
+      <div class="exam-go"><button class="btn" data-cards="s:radyoloji">Radyoloji kartları</button><button class="btn ghost" data-quiz="s:radyoloji">Radyoloji testi</button></div>
+      <h3 class="exam-h">Dersler</h3><p class="exam-note">Her ders “Sınavda çıkar · mutlaka bil” kutusuyla açılır.</p>
+      <div class="grid" data-grid="radyoloji"></div>
+    </div>
+    <div class="exam-panel" role="tabpanel" id="ex-anatomi" aria-labelledby="tab-anatomi" hidden>
+      <div class="exam-pdfs"><div class="pdfc"><span class="strip" aria-hidden="true"><i class="t-kafa"></i><i class="t-boyun"></i></span><a class="pdf-link pmain" href="ozet-anatomi-kisa.pdf" target="_blank" rel="noopener" data-file="Anatomi-Kisa-Ozet.pdf"><b>Sınav öncesi özeti<span class="sr"> · Anatomi</span></b><span>Kafa kemikleri ve boyun üçgenleri · şemalı</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-anatomi-kisa-sb.pdf" target="_blank" rel="noopener" data-file="Anatomi-Kisa-Ozet-SB.pdf">Siyah-beyaz baskı</a></div><div class="pdfc"><span class="strip" aria-hidden="true"><i class="t-kafa"></i><i class="t-boyun"></i></span><a class="pdf-link pmain" href="ozet-anatomi.pdf" target="_blank" rel="noopener" data-file="Anatomi-Ozet.pdf"><b>Ayrıntılı özet<span class="sr"> · Anatomi</span></b><span>Kafa kemikleri, boyun üçgenleri · şemalı, sınav vurgulu</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-anatomi-sb.pdf" target="_blank" rel="noopener" data-file="Anatomi-Ozet-SB.pdf">Siyah-beyaz baskı</a></div></div>
+      <div class="exam-go"><button class="btn" data-cards="s:anatomi">Anatomi kartları</button><button class="btn ghost" data-quiz="s:anatomi">Anatomi testi</button></div>
+      <h3 class="exam-h">Dersler</h3><p class="exam-note">Her ders “Sınavda çıkar · mutlaka bil” kutusuyla açılır.</p>
+      <div class="grid" data-grid="anatomi"></div>
+    </div>
+    <div class="exam-panel" role="tabpanel" id="ex-histoloji" aria-labelledby="tab-histoloji" hidden>
+      <div class="exam-pdfs"><div class="pdfc"><span class="strip" aria-hidden="true"><i class="t-his1"></i><i class="t-his2"></i><i class="t-epitel"></i></span><a class="pdf-link pmain" href="ozet-histoloji-kisa.pdf" target="_blank" rel="noopener" data-file="Histoloji-Kisa-Ozet.pdf"><b>Sınav öncesi özeti<span class="sr"> · Histoloji</span></b><span>Giriş, hücre, epitel · şemalı, hoca vurguları</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-histoloji-kisa-sb.pdf" target="_blank" rel="noopener" data-file="Histoloji-Kisa-Ozet-SB.pdf">Siyah-beyaz baskı</a></div><div class="pdfc"><span class="strip" aria-hidden="true"><i class="t-his1"></i><i class="t-his2"></i><i class="t-epitel"></i></span><a class="pdf-link pmain" href="ozet-histoloji.pdf" target="_blank" rel="noopener" data-file="Histoloji-Ozet.pdf"><b>Ayrıntılı özet<span class="sr"> · Histoloji</span></b><span>Histolojiye giriş, hücre, epitel doku · şemalı</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-histoloji-sb.pdf" target="_blank" rel="noopener" data-file="Histoloji-Ozet-SB.pdf">Siyah-beyaz baskı</a></div></div>
+      <div class="exam-go"><button class="btn" data-cards="s:histoloji">Histoloji kartları</button><button class="btn ghost" data-quiz="s:histoloji">Histoloji testi</button></div>
+      <h3 class="exam-h">Dersler</h3><p class="exam-note">Her ders “Sınavda çıkar · mutlaka bil” kutusuyla açılır.</p>
+      <div class="grid" data-grid="histoloji"></div>
+    </div>
+    <div class="pdf-status" id="pdf-status" aria-live="polite"></div>
+  </section>
+
+  <section class="daily" aria-labelledby="daily-h">
+    <div class="sect-title"><h2 id="daily-h">Günlük tekrar</h2><span class="meta" id="overall"></span></div>
+    <p class="lead">Her gün tüm derslerden 12 kart ve 8 soru. Bilmediğin kartlar önce gelir; ikisini de bitirince serin bir gün uzar.</p>
     <div class="today">
       <button id="go-daily-cards"><span class="eyebrow">Hafıza kartları</span><span class="big">Günün 12 kartı</span><span class="sub" id="dc-sub">Tüm konulardan karışık</span><span class="done" id="dc-done" hidden>Bugün tamamlandı</span></button>
       <button id="go-daily-quiz"><span class="eyebrow">Mini sınav</span><span class="big">Günün 8 sorusu</span><span class="sub">Çoktan seçmeli, açıklamalı</span><span class="done" id="dq-done" hidden>Bugün tamamlandı</span></button>
     </div>
   </section>
-
-  <div class="sect-title"><h2>Konular</h2><span class="eyebrow" id="overall"></span></div>
-  <div class="grid" id="topic-grid"></div>
-
-  <div class="sect-title"><h2>Sınav öncesi özetleri</h2><span class="eyebrow">Kısa versiyonlar · son tekrar için</span></div>
-  <div class="pdfs">
-    <div class="pdfc t-oss"><a class="pdf-link pmain" href="ozet-fizyoloji-kisa.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Kisa-Ozet.pdf"><b>Fizyoloji · kısa</b><span>7 dersin sınavlık özeti · 4 sayfa</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-fizyoloji-kisa-sb.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Kisa-Ozet-SB.pdf">Siyah-beyaz baskı</a></div>
-    <div class="pdfc t-rad"><a class="pdf-link pmain" href="ozet-radyoloji-kisa.pdf" target="_blank" rel="noopener" data-file="Radyoloji-Kisa-Ozet.pdf"><b>Radyoloji · kısa</b><span>Radyasyon fiziği ve EM spektrum · 1 sayfa</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-radyoloji-kisa-sb.pdf" target="_blank" rel="noopener" data-file="Radyoloji-Kisa-Ozet-SB.pdf">Siyah-beyaz baskı</a></div>
-    <div class="pdfc t-kafa"><a class="pdf-link pmain" href="ozet-anatomi-kisa.pdf" target="_blank" rel="noopener" data-file="Anatomi-Kisa-Ozet.pdf"><b>Anatomi · kısa</b><span>Kafa kemikleri ve boyun üçgenleri · şemalı</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-anatomi-kisa-sb.pdf" target="_blank" rel="noopener" data-file="Anatomi-Kisa-Ozet-SB.pdf">Siyah-beyaz baskı</a></div>
-    <div class="pdfc t-his1"><a class="pdf-link pmain" href="ozet-histoloji-kisa.pdf" target="_blank" rel="noopener" data-file="Histoloji-Kisa-Ozet.pdf"><b>Histoloji · kısa</b><span>Giriş, hücre, epitel · şemalı, hoca vurguları</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-histoloji-kisa-sb.pdf" target="_blank" rel="noopener" data-file="Histoloji-Kisa-Ozet-SB.pdf">Siyah-beyaz baskı</a></div>
-  </div>
-
-  <div class="sect-title"><h2>PDF özetleri</h2><span class="eyebrow">Ayrıntılı · yazdır veya çevrimdışı oku</span></div>
-  <div class="pdfs">
-    <div class="pdfc t-sinaps"><a class="pdf-link pmain" href="ozet-fizyoloji.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet.pdf"><b>Fizyoloji özeti</b><span>Hücre, PSS, sinaps, OSS ve refleksler, kas, sinir I–II · şemalı</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-fizyoloji-sb.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet-SB.pdf">Siyah-beyaz baskı</a></div>
-    <div class="pdfc t-rad"><a class="pdf-link pmain" href="ozet-radyoloji.pdf" target="_blank" rel="noopener" data-file="Radyoloji-Ozet.pdf"><b>Radyoloji özeti</b><span>Radyasyon fiziği ve elektromanyetik radyasyon</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-radyoloji-sb.pdf" target="_blank" rel="noopener" data-file="Radyoloji-Ozet-SB.pdf">Siyah-beyaz baskı</a></div>
-    <div class="pdfc t-kafa"><a class="pdf-link pmain" href="ozet-anatomi.pdf" target="_blank" rel="noopener" data-file="Anatomi-Ozet.pdf"><b>Anatomi özeti</b><span>Kafa kemikleri, boyun üçgenleri · şemalı, sınav vurgulu</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-anatomi-sb.pdf" target="_blank" rel="noopener" data-file="Anatomi-Ozet-SB.pdf">Siyah-beyaz baskı</a></div>
-    <div class="pdfc t-his2"><a class="pdf-link pmain" href="ozet-histoloji.pdf" target="_blank" rel="noopener" data-file="Histoloji-Ozet.pdf"><b>Histoloji özeti</b><span>Histolojiye giriş, hücre, epitel doku · şemalı</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-histoloji-sb.pdf" target="_blank" rel="noopener" data-file="Histoloji-Ozet-SB.pdf">Siyah-beyaz baskı</a></div>
-  </div>
-  <div class="pdf-status" id="pdf-status" aria-live="polite"></div>
 
   <div class="howto">
     <b>Telefona / iPad'e ekle:</b> Bu sayfayı Safari'de açıp <b>Paylaş → Ana Ekrana Ekle</b> dersen uygulama gibi açılır. İlerlemen (bildiğin kartlar, okuduğun konular, serin) bu cihazın tarayıcısında saklanır; telefon ve iPad ayrı ayrı tutar.
@@ -399,13 +495,22 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
 <!-- ============ TOPIC: HÜCRE ============ -->
 <main class="wrap view t-hucre" id="v-hucre" hidden>
   <div class="thead">
-    <a class="back" href="#bugun">← Konular</a>
-    <div class="eyebrow" style="color:var(--c)">Fizyoloji · Ders 1</div>
+    <a class="back" href="#bugun"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Ana sayfa</a>
     <h1>Hücre Fizyolojisi</h1>
-    <div class="src">Prof. Dr. Mehmet Yıldırım · kaynak: 1_Hücre Fizyolojisi.pdf</div>
+    <div class="eyebrow" style="color:var(--c)">Fizyoloji · Ders 1</div>
+    <div class="src">Prof. Dr. Mehmet Yıldırım · ders slaytları</div>
     <div class="row"><button class="pill readbtn" data-read="hucre" aria-pressed="false">Okudum olarak işaretle</button></div>
   </div>
   <nav class="toc"></nav>
+
+  <div class="callout exam"><span class="lab">Sınavda çıkar · mutlaka bil</span><ol>
+    <li>Akıcı-mozaik model; membran lipitleri ve <b>iç/dış yüz</b> dağılımı (fosfatidilserin dışa çıkarsa apoptoz)</li>
+    <li>Taşınma tipleri: basit ve kolaylaştırılmış difüzyon, <b>primer aktif</b> (Na⁺-K⁺ ATPaz: 3 Na⁺ dışarı, 2 K⁺ içeri), sekonder aktif (simport / antiport örnekleri)</li>
+    <li>Organellerin görevleri: granüllü / düz ER, Golgi, mitokondri, lizozom, peroksizom</li>
+    <li>Haberleşme tipleri: otokrin, parakrin, nörokrin, endokrin, jukstakrin</li>
+    <li><b>5 reseptör tipi</b> ve örnekleri; özgüllük, afinite, agonist, antagonist</li>
+    <li>İkinci haberciler: <b>Gs → cAMP → PKA</b>, <b>Gq → IP<sub>3</sub> + DAG</b>, NO → cGMP; aspirin ve tromboksan</li>
+  </ol></div>
 
   <h2 id="h-mem">Hücre membranı</h2>
   <ul>
@@ -614,19 +719,28 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
   </table></div>
   <div class="callout tip"><span class="lab">Diş hekimliği bağlantısı</span><p>Aspirin tromboksan sentezini baskıladığı için trombosit fonksiyonu azalır; diş çekimi gibi işlemlerden önce hastanın aspirin kullanıp kullanmadığı bu yüzden sorulur.</p></div>
 
-  <div class="tend"><button class="btn" data-cards="hucre">Bu konunun kartları</button><button class="btn ghost" data-quiz="hucre">Konu testi</button><a class="btn ghost pdf-link" href="ozet-fizyoloji.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet.pdf" style="text-decoration:none">Fizyoloji PDF</a></div>
+  <div class="tend"><button class="btn" data-cards="hucre">Bu konunun kartları</button><button class="btn ghost" data-quiz="hucre">Konu testi</button><button class="pill readbtn" data-read="hucre" aria-pressed="false">Okudum olarak işaretle</button><span class="tend-pdf"><a class="pdf-link" href="ozet-fizyoloji.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet.pdf" data-title="Fizyoloji özeti">Fizyoloji özeti · renkli PDF</a><a class="pdf-link" href="ozet-fizyoloji-sb.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet-SB.pdf" data-title="Fizyoloji özeti · siyah-beyaz">Siyah-beyaz baskı</a></span></div>
 </main>
 
 <!-- ============ TOPIC: PSS I ============ -->
 <main class="wrap view t-pss1" id="v-pss1" hidden>
   <div class="thead">
-    <a class="back" href="#bugun">← Konular</a>
-    <div class="eyebrow" style="color:var(--c)">Fizyoloji · Ders 2</div>
+    <a class="back" href="#bugun"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Ana sayfa</a>
     <h1>Periferik Sinir Sistemi Fizyolojisi I</h1>
-    <div class="src">Prof. Dr. Mehmet Yıldırım · kaynak: 2_Periferik Sinir Sistemi Fizyolojisi-I.pdf</div>
+    <div class="eyebrow" style="color:var(--c)">Fizyoloji · Ders 2</div>
+    <div class="src">Prof. Dr. Mehmet Yıldırım · ders slaytları</div>
     <div class="row"><button class="pill readbtn" data-read="pss1" aria-pressed="false">Okudum olarak işaretle</button></div>
   </div>
   <nav class="toc"></nav>
+
+  <div class="callout exam"><span class="lab">Sınavda çıkar · mutlaka bil</span><ol>
+    <li>Nöron tipleri; soma ve akson, <b>Nissl</b> yalnız nöronda (aksonda yok)</li>
+    <li>Miyelin ve Ranvier boğumları; <b>saltatorik ileti</b> ve faydaları</li>
+    <li>Glia hücreleri ve görevleri: astrosit, mikroglia, oligodendrosit, ependim, Schwann, satellit</li>
+    <li><b>Sinir lifi sınıflaması</b> (Aα → C) ve hızları; pulpada <b>Aδ</b> keskin, <b>C</b> künt ağrı</li>
+    <li>İstirahat membran potansiyeli (<b>−70 / −90 mV</b>), Nernst ve Goldman, −90 mV'u oluşturan faktörler</li>
+    <li>Dereceli potansiyel ve AP farkı; AP evreleri, <b>refrakter dönemler</b>; lidokain / TTX → Na⁺ kanalı</li>
+  </ol></div>
 
   <h2 id="p-noron">Nöron tipleri</h2>
   <p>İzotropik fraksiyonlayıcı ile insan beyninde yaklaşık <b>85 milyar nöron</b> ve <b>85 milyar glia</b> hesaplanmıştır.</p>
@@ -818,19 +932,28 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
     <li>Akson <b>ortasından</b> uyarılırsa AP <b>iki yönde</b> de ilerler.</li>
   </ul>
 
-  <div class="tend"><button class="btn" data-cards="pss1">Bu konunun kartları</button><button class="btn ghost" data-quiz="pss1">Konu testi</button><a class="btn ghost pdf-link" href="ozet-fizyoloji.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet.pdf" style="text-decoration:none">Fizyoloji PDF</a></div>
+  <div class="tend"><button class="btn" data-cards="pss1">Bu konunun kartları</button><button class="btn ghost" data-quiz="pss1">Konu testi</button><button class="pill readbtn" data-read="pss1" aria-pressed="false">Okudum olarak işaretle</button><span class="tend-pdf"><a class="pdf-link" href="ozet-fizyoloji.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet.pdf" data-title="Fizyoloji özeti">Fizyoloji özeti · renkli PDF</a><a class="pdf-link" href="ozet-fizyoloji-sb.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet-SB.pdf" data-title="Fizyoloji özeti · siyah-beyaz">Siyah-beyaz baskı</a></span></div>
 </main>
 
 <!-- ============ TOPIC: SİNAPS ============ -->
 <main class="wrap view t-sinaps" id="v-sinaps" hidden>
   <div class="thead">
-    <a class="back" href="#bugun">← Konular</a>
-    <div class="eyebrow" style="color:var(--c)">Fizyoloji · Ders 3</div>
+    <a class="back" href="#bugun"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Ana sayfa</a>
     <h1>Sinaps ve Nörotransmitterler</h1>
-    <div class="src">Prof. Dr. Mehmet Yıldırım · kaynak: 3_Periferik Sinir Sistemi Fizyolojisi-II.pdf</div>
+    <div class="eyebrow" style="color:var(--c)">Fizyoloji · Ders 3</div>
+    <div class="src">Prof. Dr. Mehmet Yıldırım · ders slaytları</div>
     <div class="row"><button class="pill readbtn" data-read="sinaps" aria-pressed="false">Okudum olarak işaretle</button></div>
   </div>
   <nav class="toc"></nav>
+
+  <div class="callout exam"><span class="lab">Sınavda çıkar · mutlaka bil</span><ol>
+    <li>Elektriksel ve kimyasal sinaps farkı (gap junction, ileti yönü)</li>
+    <li>Salınım: Ca²⁺ girişi ve <b>SNARE proteinleri</b> (sinaptobrevin, sinaptotagmin, sintaksin, SNAP-25); tetanus toksini</li>
+    <li><b>EPSP / İPSP</b>; spasyal ve temporal sumasyon</li>
+    <li>Nörotransmitter olabilmenin <b>4 kriteri</b></li>
+    <li>Başlıca NT'ler ve reseptörleri: ACh (nikotinik / muskarinik), glutamat (NMDA), GABA, glisin, dopamin</li>
+    <li><b>Blokerler:</b> kürar → nikotinik, atropin → muskarinik, striknin → glisin, pikrotoksin → GABA<sub>A</sub>, kafein → adenozin</li>
+  </ol></div>
 
   <h2 id="sinaps-tip">Sinaps tipleri</h2>
   <p>Sinaps; <b>nöron–nöron</b> ya da <b>nöron–kas hücresi</b> arasındaki bağlantı bölgesidir. Nöron–iskelet kası sinapsına <b>sinir-kas kavşağı (nöromüsküler kavşak)</b> denir.</p>
@@ -1041,19 +1164,28 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
     <li>İyonotropik olanlar: nAChR, AMPA, kainat, NMDA, GABA<sub>A</sub>, GABA<sub>C</sub>, glisin, 5-HT3, P2X.</li>
   </ul></div>
 
-  <div class="tend"><button class="btn" data-cards="sinaps">Bu konunun kartları</button><button class="btn ghost" data-quiz="sinaps">Konu testi</button><a class="btn ghost pdf-link" href="ozet-fizyoloji.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet.pdf" style="text-decoration:none">Fizyoloji PDF</a></div>
+  <div class="tend"><button class="btn" data-cards="sinaps">Bu konunun kartları</button><button class="btn ghost" data-quiz="sinaps">Konu testi</button><button class="pill readbtn" data-read="sinaps" aria-pressed="false">Okudum olarak işaretle</button><span class="tend-pdf"><a class="pdf-link" href="ozet-fizyoloji.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet.pdf" data-title="Fizyoloji özeti">Fizyoloji özeti · renkli PDF</a><a class="pdf-link" href="ozet-fizyoloji-sb.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet-SB.pdf" data-title="Fizyoloji özeti · siyah-beyaz">Siyah-beyaz baskı</a></span></div>
 </main>
 
 <!-- ============ TOPIC: OSS ============ -->
 <main class="wrap view t-oss" id="v-oss" hidden>
   <div class="thead">
-    <a class="back" href="#bugun">← Konular</a>
-    <div class="eyebrow" style="color:var(--c)">Fizyoloji · Ders 4</div>
+    <a class="back" href="#bugun"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Ana sayfa</a>
     <h1>Otonom Sinir Sistemi ve Refleksler</h1>
-    <div class="src">Prof. Dr. Mehmet Yıldırım · kaynak: 4_OSS ve Refleksler.pdf</div>
+    <div class="eyebrow" style="color:var(--c)">Fizyoloji · Ders 4</div>
+    <div class="src">Prof. Dr. Mehmet Yıldırım · ders slaytları</div>
     <div class="row"><button class="pill readbtn" data-read="oss" aria-pressed="false">Okudum olarak işaretle</button></div>
   </div>
   <nav class="toc"></nav>
+
+  <div class="callout exam"><span class="lab">Sınavda çıkar · mutlaka bil</span><ol>
+    <li>Sempatik ve parasempatik: <b>köken</b> (T1–L2 / kraniyal + S2–S4), gangliyon yeri, pre / post lif uzunluğu, NT</li>
+    <li>Adrenerjik reseptörler <b>α1, α2, β1, β2, β3</b>: yer ve etki</li>
+    <li><b>Nikotinik</b> (gangliyon, sinir-kas kavşağı, adrenal medulla) ve <b>muskarinik</b> (M2 kalpte ↓, M3 bez ve düz kasta ↑)</li>
+    <li>Adrenal medulla değişmiş sempatik gangliyondur: epinefrin %80, NE %20</li>
+    <li>Motor ünite ve <b>boyut ilkesi</b>; kas iğciği ile Golgi tendon organı farkı (Ia / II, Ib)</li>
+    <li>Tek <b>monosinaptik</b> refleks kas gerim (patella); diğerlerinin hepsi polisinaptik</li>
+  </ol></div>
 
   <h2 id="oss-genel">Genel yapı</h2>
   <ul>
@@ -1174,19 +1306,28 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
   </table></div>
   <div class="callout exam"><span class="lab">Sınav notu</span><p>Tek <b>monosinaptik</b> refleks: kas gerim (patella). Diğerlerinin hepsi <b>polisinaptik</b>.</p></div>
 
-  <div class="tend"><button class="btn" data-cards="oss">Bu konunun kartları</button><button class="btn ghost" data-quiz="oss">Konu testi</button><a class="btn ghost pdf-link" href="ozet-fizyoloji.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet.pdf" style="text-decoration:none">Fizyoloji PDF</a></div>
+  <div class="tend"><button class="btn" data-cards="oss">Bu konunun kartları</button><button class="btn ghost" data-quiz="oss">Konu testi</button><button class="pill readbtn" data-read="oss" aria-pressed="false">Okudum olarak işaretle</button><span class="tend-pdf"><a class="pdf-link" href="ozet-fizyoloji.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet.pdf" data-title="Fizyoloji özeti">Fizyoloji özeti · renkli PDF</a><a class="pdf-link" href="ozet-fizyoloji-sb.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet-SB.pdf" data-title="Fizyoloji özeti · siyah-beyaz">Siyah-beyaz baskı</a></span></div>
 </main>
 
 <!-- ============ TOPIC: KAS ============ -->
 <main class="wrap view t-kas" id="v-kas" hidden>
   <div class="thead">
-    <a class="back" href="#bugun">← Konular</a>
-    <div class="eyebrow" style="color:var(--c)">Fizyoloji · Ders 5</div>
+    <a class="back" href="#bugun"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Ana sayfa</a>
     <h1>Kas Fizyolojisi</h1>
-    <div class="src">Prof. Dr. Mehmet Yıldırım · kaynak: 5_Kas Fizyolojisi.pdf</div>
+    <div class="eyebrow" style="color:var(--c)">Fizyoloji · Ders 5</div>
+    <div class="src">Prof. Dr. Mehmet Yıldırım · ders slaytları</div>
     <div class="row"><button class="pill readbtn" data-read="kas" aria-pressed="false">Okudum olarak işaretle</button></div>
   </div>
   <nav class="toc"></nav>
+
+  <div class="callout exam"><span class="lab">Sınavda çıkar · mutlaka bil</span><ol>
+    <li>Sinir-kas kavşağı sırası: AP → Ca²⁺ → <b>ACh</b> → nikotinik reseptör → son plak potansiyeli</li>
+    <li>Uyarılma-kasılma: T-tübül → <b>DHPR → RyR1</b> → SR'den Ca²⁺ → troponin C</li>
+    <li>Sarkomer: kasılmada <b>I bandı ve H zonu daralır</b>, A bandı değişmez; troponin C / T / I</li>
+    <li>Çapraz köprü döngüsü; ATP yoksa <b>rigor mortis</b></li>
+    <li>Lif tipleri (Tip I, IIA, IIB); izometrik / izotonik; tetanus, treppe</li>
+    <li>Düz kas: <b>kalmodulin → MLCK</b>, tek / çok üniteli, latch; üç kas tipinin karşılaştırması</li>
+  </ol></div>
 
   <h2 id="kas-nmj">Sinir-kas kavşağı</h2>
   <p>ACh, presinaptik terminalde <b>kolin asetiltransferaz</b> ile <b>asetil-CoA + kolin</b>'den yapılır ve veziküllerde (ATP ve proteoglikan ile birlikte) depolanır.</p>
@@ -1354,19 +1495,28 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
   </table></div>
   <p style="font-size:15px;color:var(--muted)">"Düz kasta T tübül yok" satırı standart bilgi olarak eklendi.</p>
 
-  <div class="tend"><button class="btn" data-cards="kas">Bu konunun kartları</button><button class="btn ghost" data-quiz="kas">Konu testi</button><a class="btn ghost pdf-link" href="ozet-fizyoloji.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet.pdf" style="text-decoration:none">Fizyoloji PDF</a></div>
+  <div class="tend"><button class="btn" data-cards="kas">Bu konunun kartları</button><button class="btn ghost" data-quiz="kas">Konu testi</button><button class="pill readbtn" data-read="kas" aria-pressed="false">Okudum olarak işaretle</button><span class="tend-pdf"><a class="pdf-link" href="ozet-fizyoloji.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet.pdf" data-title="Fizyoloji özeti">Fizyoloji özeti · renkli PDF</a><a class="pdf-link" href="ozet-fizyoloji-sb.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet-SB.pdf" data-title="Fizyoloji özeti · siyah-beyaz">Siyah-beyaz baskı</a></span></div>
 </main>
 
 <!-- ============ TOPIC: SİNİR I ============ -->
 <main class="wrap view t-sinir1" id="v-sinir1" hidden>
   <div class="thead">
-    <a class="back" href="#bugun">← Konular</a>
-    <div class="eyebrow" style="color:var(--c)">Fizyoloji · Ders 6</div>
+    <a class="back" href="#bugun"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Ana sayfa</a>
     <h1>Sinir Fizyolojisi I</h1>
-    <div class="src">Prof. Dr. Mehmet Yıldırım · kaynak: 6_Sinir Fizyolojisi-I.pdf</div>
+    <div class="eyebrow" style="color:var(--c)">Fizyoloji · Ders 6</div>
+    <div class="src">Prof. Dr. Mehmet Yıldırım · ders slaytları</div>
     <div class="row"><button class="pill readbtn" data-read="sinir1" aria-pressed="false">Okudum olarak işaretle</button></div>
   </div>
   <nav class="toc"></nav>
+
+  <div class="callout exam"><span class="lab">Sınavda çıkar · mutlaka bil</span><ol>
+    <li>Sinir sisteminin organizasyonu: MSS / PSS, somatik / viseral; <b>nukleus ve gangliyon</b> farkı</li>
+    <li>İyon dağılımı: dışarıda Na⁺ ve Cl⁻, içeride K⁺ ve proteinler fazla</li>
+    <li><b>Hücre dışı Ca²⁺ ↓ → tetani</b>: Na⁺ kanalları kolay açılır</li>
+    <li>Miyelinsiz ve miyelinli lifte ileti hızları</li>
+    <li>Nörotransmitter grupları: ACh, amino asitler, monoaminler, nöropeptitler, gazlar</li>
+    <li>Kas iğciği ve <b>patella refleksi zinciri</b>; spinal şok</li>
+  </ol></div>
 
   <h2 id="s1-org">Sinir sisteminin organizasyonu</h2>
   <div class="cols">
@@ -1473,19 +1623,28 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
   <div class="callout exam"><span class="lab">Patella refleksi zinciri</span><p>Çekiç → kuadriseps uzar → kas iğciği aktive → <b>Ia afferent</b> → omurilik → ön boynuz <b>α-motor nöron</b> → kuadriseps kasılır.</p></div>
   <p>Fleksör ve çapraz ekstensör refleksler için <a href="#oss" style="color:var(--c-oss);font-weight:700">OSS ve Refleksler</a> konusuna bak.</p>
 
-  <div class="tend"><button class="btn" data-cards="sinir1">Bu konunun kartları</button><button class="btn ghost" data-quiz="sinir1">Konu testi</button><a class="btn ghost pdf-link" href="ozet-fizyoloji.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet.pdf" style="text-decoration:none">Fizyoloji PDF</a></div>
+  <div class="tend"><button class="btn" data-cards="sinir1">Bu konunun kartları</button><button class="btn ghost" data-quiz="sinir1">Konu testi</button><button class="pill readbtn" data-read="sinir1" aria-pressed="false">Okudum olarak işaretle</button><span class="tend-pdf"><a class="pdf-link" href="ozet-fizyoloji.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet.pdf" data-title="Fizyoloji özeti">Fizyoloji özeti · renkli PDF</a><a class="pdf-link" href="ozet-fizyoloji-sb.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet-SB.pdf" data-title="Fizyoloji özeti · siyah-beyaz">Siyah-beyaz baskı</a></span></div>
 </main>
 
 <!-- ============ TOPIC: SİNİR II ============ -->
 <main class="wrap view t-sinir2" id="v-sinir2" hidden>
   <div class="thead">
-    <a class="back" href="#bugun">← Konular</a>
-    <div class="eyebrow" style="color:var(--c)">Fizyoloji · Ders 7</div>
+    <a class="back" href="#bugun"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Ana sayfa</a>
     <h1>Sinir Fizyolojisi II: Merkezi Sinir Sistemi</h1>
-    <div class="src">Prof. Dr. Mehmet Yıldırım · kaynak: 7_Sinir Fizyolojisi-II.pdf</div>
+    <div class="eyebrow" style="color:var(--c)">Fizyoloji · Ders 7</div>
+    <div class="src">Prof. Dr. Mehmet Yıldırım · ders slaytları</div>
     <div class="row"><button class="pill readbtn" data-read="sinir2" aria-pressed="false">Okudum olarak işaretle</button></div>
   </div>
   <nav class="toc"></nav>
+
+  <div class="callout exam"><span class="lab">Sınavda çıkar · mutlaka bil</span><ol>
+    <li>Meninksler dıştan içe <b>dura – araknoid – pia</b>; BOS subaraknoid alanda</li>
+    <li>Omurilik: C1–L2, arka boynuz duyu, ön boynuz motor; çıkan ve inen yollar</li>
+    <li>Beyin sapı ve kraniyal sinirler; <b>talamus</b> (koku hariç tüm duyular), <b>hipotalamusun 8 görevi</b></li>
+    <li>Serebellum: 3 bölüm, korteks tabakaları, <b>tırmanıcı lif → Purkinje</b></li>
+    <li>Loblar ve konuşma merkezi; bazal gangliyonlar ve <b>Parkinson</b>'un 4 belirtisi</li>
+    <li><b>EEG dalgaları</b> (beta, alfa, teta, delta) ve uyku evreleri; öğrenme tipleri; hastalıklar</li>
+  </ol></div>
 
   <h2 id="s2-bol">MSS'nin bölümleri ve zarlar</h2>
   <div class="ladder">
@@ -1626,19 +1785,28 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
     <tr><td>Multiple skleroz</td><td><b>Miyelin kılıf bozulması</b>; duyu kaybı, paralizi; immün sistemle ilişkili</td></tr>
   </table></div>
 
-  <div class="tend"><button class="btn" data-cards="sinir2">Bu konunun kartları</button><button class="btn ghost" data-quiz="sinir2">Konu testi</button><a class="btn ghost pdf-link" href="ozet-fizyoloji.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet.pdf" style="text-decoration:none">Fizyoloji PDF</a></div>
+  <div class="tend"><button class="btn" data-cards="sinir2">Bu konunun kartları</button><button class="btn ghost" data-quiz="sinir2">Konu testi</button><button class="pill readbtn" data-read="sinir2" aria-pressed="false">Okudum olarak işaretle</button><span class="tend-pdf"><a class="pdf-link" href="ozet-fizyoloji.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet.pdf" data-title="Fizyoloji özeti">Fizyoloji özeti · renkli PDF</a><a class="pdf-link" href="ozet-fizyoloji-sb.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet-SB.pdf" data-title="Fizyoloji özeti · siyah-beyaz">Siyah-beyaz baskı</a></span></div>
 </main>
 
 <!-- ============ TOPIC: RADYASYON ============ -->
 <main class="wrap view t-rad" id="v-rad" hidden>
   <div class="thead">
-    <a class="back" href="#bugun">← Konular</a>
-    <div class="eyebrow" style="color:var(--c)">Ağız, Diş ve Çene Radyolojisi · 22.09.2026</div>
+    <a class="back" href="#bugun"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Ana sayfa</a>
     <h1>Radyasyon Fiziği ve Elektromanyetik Radyasyon</h1>
-    <div class="src">Dr. Öğr. Üyesi Merve Hacer Talu · kaynak: 22.09.26.pptx</div>
+    <div class="eyebrow" style="color:var(--c)">Ağız, Diş ve Çene Radyolojisi · 22.09.2026</div>
+    <div class="src">Dr. Öğr. Üyesi Merve Hacer Talu · ders slaytı, 22.09.2026</div>
     <div class="row"><button class="pill readbtn" data-read="rad" aria-pressed="false">Okudum olarak işaretle</button></div>
   </div>
   <nav class="toc"></nav>
+
+  <div class="callout exam"><span class="lab">Sınavda çıkar · mutlaka bil</span><ol>
+    <li>Atomun yapısı: proton, nötron, elektron; <b>Z, N, A</b>; izotop ve radyoizotop</li>
+    <li><b>Uyarılma ve iyonizasyon</b> farkı; K kabuğu en düşük enerji düzeyi ama <b>en yüksek bağlanma enerjisi</b></li>
+    <li>EM dalga enine dalgadır, ortam gerektirmez: <b>c = λ × f</b>, <b>E = h × f</b></li>
+    <li>Kısa λ → yüksek f → yüksek enerji; foton kütlesiz ve yüksüz; dalga–parçacık ikiliği</li>
+    <li>Spektrum sırası radyodan gamaya; <b>gama ile X</b> kaynağına göre ayrılır (gama çekirdekten)</li>
+    <li>İki ayrı sınıflama: EM / parçacık ve iyonlaştırıcı / değil (X-ışını EM + iyonlaştırıcı, alfa parçacık + iyonlaştırıcı)</li>
+  </ol></div>
 
   <h2 id="rad-atom">Atomun yapısı</h2>
   <div class="tbl"><table>
@@ -1782,16 +1950,16 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
   </table></div>
   <div class="callout exam"><span class="lab">Sınav notu</span><p>Bu iki sınıflama <b>birbirinden farklıdır</b>: X-ışını hem elektromanyetik hem iyonlaştırıcıdır; alfa hem parçacık hem iyonlaştırıcıdır.</p></div>
 
-  <div class="tend"><button class="btn" data-cards="rad">Bu konunun kartları</button><button class="btn ghost" data-quiz="rad">Konu testi</button><a class="btn ghost pdf-link" href="ozet-radyoloji.pdf" target="_blank" rel="noopener" data-file="Radyoloji-Ozet.pdf" style="text-decoration:none">Radyoloji PDF</a></div>
+  <div class="tend"><button class="btn" data-cards="rad">Bu konunun kartları</button><button class="btn ghost" data-quiz="rad">Konu testi</button><button class="pill readbtn" data-read="rad" aria-pressed="false">Okudum olarak işaretle</button><span class="tend-pdf"><a class="pdf-link" href="ozet-radyoloji.pdf" target="_blank" rel="noopener" data-file="Radyoloji-Ozet.pdf" data-title="Radyoloji özeti">Radyoloji özeti · renkli PDF</a><a class="pdf-link" href="ozet-radyoloji-sb.pdf" target="_blank" rel="noopener" data-file="Radyoloji-Ozet-SB.pdf" data-title="Radyoloji özeti · siyah-beyaz">Siyah-beyaz baskı</a></span></div>
 </main>
 
 <!-- ============ TOPIC: KAFA KEMİKLERİ ============ -->
 <main class="wrap view t-kafa" id="v-kafa" hidden>
   <div class="thead">
-    <a class="back" href="#bugun">← Konular</a>
-    <div class="eyebrow" style="color:var(--c)">Anatomi · Baş</div>
+    <a class="back" href="#bugun"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Ana sayfa</a>
     <h1>Cranium Kemikleri ve Eklemler</h1>
-    <div class="src">kaynak: 2 kafa kemikleri.pdf</div>
+    <div class="eyebrow" style="color:var(--c)">Anatomi · Baş</div>
+    <div class="src">Ders slaytları</div>
     <div class="row"><button class="pill readbtn" data-read="kafa" aria-pressed="false">Okudum olarak işaretle</button></div>
   </div>
   <nav class="toc"></nav>
@@ -2168,16 +2336,16 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
     <figcaption><b>Le Fort I:</b> maxilla dişlerle birlikte yatay ayrılır · <b>II:</b> maxilla + os nasale + infraorbital çerçeve piramit gibi ayrılır · <b>III:</b> zygomaticum ve orbitadan geçer, <b>yüz iskeleti kafatasından ayrılır</b> (BOS sızıntısı).</figcaption>
   </figure>
 
-  <div class="tend"><button class="btn" data-cards="kafa">Bu konunun kartları</button><button class="btn ghost" data-quiz="kafa">Konu testi</button><a class="btn ghost pdf-link" href="ozet-anatomi-kisa.pdf" target="_blank" rel="noopener" data-file="Anatomi-Kisa-Ozet.pdf" style="text-decoration:none">Anatomi PDF</a></div>
+  <div class="tend"><button class="btn" data-cards="kafa">Bu konunun kartları</button><button class="btn ghost" data-quiz="kafa">Konu testi</button><button class="pill readbtn" data-read="kafa" aria-pressed="false">Okudum olarak işaretle</button><span class="tend-pdf"><a class="pdf-link" href="ozet-anatomi.pdf" target="_blank" rel="noopener" data-file="Anatomi-Ozet.pdf" data-title="Anatomi özeti">Anatomi özeti · renkli PDF</a><a class="pdf-link" href="ozet-anatomi-sb.pdf" target="_blank" rel="noopener" data-file="Anatomi-Ozet-SB.pdf" data-title="Anatomi özeti · siyah-beyaz">Siyah-beyaz baskı</a></span></div>
 </main>
 
 <!-- ============ TOPIC: BOYUN ÜÇGENLERİ ============ -->
 <main class="wrap view t-boyun" id="v-boyun" hidden>
   <div class="thead">
-    <a class="back" href="#bugun">← Konular</a>
-    <div class="eyebrow" style="color:var(--c)">Anatomi · Boyun</div>
+    <a class="back" href="#bugun"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Ana sayfa</a>
     <h1>Boyun Üçgenleri</h1>
-    <div class="src">kaynak: Boyun Üçgenleri.pdf</div>
+    <div class="eyebrow" style="color:var(--c)">Anatomi · Boyun</div>
+    <div class="src">Ders slaytları</div>
     <div class="row"><button class="pill readbtn" data-read="boyun" aria-pressed="false">Okudum olarak işaretle</button></div>
   </div>
   <nav class="toc"></nav>
@@ -2460,16 +2628,16 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
     <tr><td>A. carotis communis, a. subclavia, a. vertebralis, a. transversa cervicis</td><td>V. jugularis interna, subclavia, brachiocephalica, thyroidea inferior, vertebralis</td><td>N. vagus, n. laryngeus recurrens, n. phrenicus, truncus sympathicus, plexus brachialis</td><td>Trachea, oesophagus, ductus thoracicus, ductus lymphaticus dexter</td></tr>
   </table></div>
 
-  <div class="tend"><button class="btn" data-cards="boyun">Bu konunun kartları</button><button class="btn ghost" data-quiz="boyun">Konu testi</button><a class="btn ghost pdf-link" href="ozet-anatomi-kisa.pdf" target="_blank" rel="noopener" data-file="Anatomi-Kisa-Ozet.pdf" style="text-decoration:none">Anatomi PDF</a></div>
+  <div class="tend"><button class="btn" data-cards="boyun">Bu konunun kartları</button><button class="btn ghost" data-quiz="boyun">Konu testi</button><button class="pill readbtn" data-read="boyun" aria-pressed="false">Okudum olarak işaretle</button><span class="tend-pdf"><a class="pdf-link" href="ozet-anatomi.pdf" target="_blank" rel="noopener" data-file="Anatomi-Ozet.pdf" data-title="Anatomi özeti">Anatomi özeti · renkli PDF</a><a class="pdf-link" href="ozet-anatomi-sb.pdf" target="_blank" rel="noopener" data-file="Anatomi-Ozet-SB.pdf" data-title="Anatomi özeti · siyah-beyaz">Siyah-beyaz baskı</a></span></div>
 </main>
 
 <!-- ============ TOPIC: HİSTOLOJİYE GİRİŞ ============ -->
 <main class="wrap view t-his1" id="v-his1" hidden>
   <div class="thead">
-    <a class="back" href="#bugun">← Konular</a>
-    <div class="eyebrow" style="color:var(--c)">Histoloji · Ders 1</div>
+    <a class="back" href="#bugun"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Ana sayfa</a>
     <h1>Histolojiye Giriş</h1>
-    <div class="src">Dr. Öğr. Üyesi Betül Zehra Karip · kaynak: 1) HİSTOLOJİYE GİRİŞ-DHF.pdf</div>
+    <div class="eyebrow" style="color:var(--c)">Histoloji · Ders 1</div>
+    <div class="src">Dr. Öğr. Üyesi Betül Zehra Karip · ders slaytları</div>
     <div class="row"><button class="pill readbtn" data-read="his1" aria-pressed="false">Okudum olarak işaretle</button></div>
   </div>
   <nav class="toc"></nav>
@@ -2589,16 +2757,16 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
   </table></div>
   <p>Hazırlama, boyama ve görüntüleme sırasında yırtılma, katlanma, bıçak izi, yetersiz/aşırı boyama, odak dışı görüntü gibi hatalar (artefakt) oluşabilir.</p>
 
-  <div class="tend"><button class="btn" data-cards="his1">Bu konunun kartları</button><button class="btn ghost" data-quiz="his1">Konu testi</button><a class="btn ghost pdf-link" href="ozet-histoloji.pdf" target="_blank" rel="noopener" data-file="Histoloji-Ozet.pdf" style="text-decoration:none">Histoloji PDF</a></div>
+  <div class="tend"><button class="btn" data-cards="his1">Bu konunun kartları</button><button class="btn ghost" data-quiz="his1">Konu testi</button><button class="pill readbtn" data-read="his1" aria-pressed="false">Okudum olarak işaretle</button><span class="tend-pdf"><a class="pdf-link" href="ozet-histoloji.pdf" target="_blank" rel="noopener" data-file="Histoloji-Ozet.pdf" data-title="Histoloji özeti">Histoloji özeti · renkli PDF</a><a class="pdf-link" href="ozet-histoloji-sb.pdf" target="_blank" rel="noopener" data-file="Histoloji-Ozet-SB.pdf" data-title="Histoloji özeti · siyah-beyaz">Siyah-beyaz baskı</a></span></div>
 </main>
 
 <!-- ============ TOPIC: HÜCRE (HİSTOLOJİ) ============ -->
 <main class="wrap view t-his2" id="v-his2" hidden>
   <div class="thead">
-    <a class="back" href="#bugun">← Konular</a>
-    <div class="eyebrow" style="color:var(--c)">Histoloji · Ders 2</div>
+    <a class="back" href="#bugun"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Ana sayfa</a>
     <h1>Hücre: Yapı, Organeller ve Bölünme</h1>
-    <div class="src">Dr. Öğr. Üyesi Betül Zehra Karip · kaynak: 2) Hücre DHF.pdf</div>
+    <div class="eyebrow" style="color:var(--c)">Histoloji · Ders 2</div>
+    <div class="src">Dr. Öğr. Üyesi Betül Zehra Karip · ders slaytları</div>
     <div class="row"><button class="pill readbtn" data-read="his2" aria-pressed="false">Okudum olarak işaretle</button></div>
   </div>
   <nav class="toc"></nav>
@@ -2915,25 +3083,20 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
   </table></div>
   <div class="callout tip"><span class="lab">Diş hekimliği bağlantısı</span><p><b>Diş kök hücreleri:</b> <b>DPSC</b> (diş pulpası), <b>SHED</b> (düşen süt dişi), <b>PDLSC</b> (periodontal ligament), <b>SCAP</b> (apikal papilla), <b>DFSC</b> (dental folikül), <b>GMSC/GFSC</b> (dişeti). Özellikleri: kendini yenileme, çok yönlü farklılaşma (odontoblast, osteoblast, kondrosit, adiposit...), salgı, immünomodülasyon. Kullanım: pulpa rejenerasyonu, periodontal kemik defektleri, çekim soketleri.</p></div>
 
-  <div class="tend"><button class="btn" data-cards="his2">Bu konunun kartları</button><button class="btn ghost" data-quiz="his2">Konu testi</button><a class="btn ghost pdf-link" href="ozet-histoloji.pdf" target="_blank" rel="noopener" data-file="Histoloji-Ozet.pdf" style="text-decoration:none">Histoloji PDF</a></div>
+  <div class="tend"><button class="btn" data-cards="his2">Bu konunun kartları</button><button class="btn ghost" data-quiz="his2">Konu testi</button><button class="pill readbtn" data-read="his2" aria-pressed="false">Okudum olarak işaretle</button><span class="tend-pdf"><a class="pdf-link" href="ozet-histoloji.pdf" target="_blank" rel="noopener" data-file="Histoloji-Ozet.pdf" data-title="Histoloji özeti">Histoloji özeti · renkli PDF</a><a class="pdf-link" href="ozet-histoloji-sb.pdf" target="_blank" rel="noopener" data-file="Histoloji-Ozet-SB.pdf" data-title="Histoloji özeti · siyah-beyaz">Siyah-beyaz baskı</a></span></div>
 </main>
 
 <!-- ============ TOPIC: EPİTEL DOKU ============ -->
 <main class="wrap view t-epitel" id="v-epitel" hidden>
   <div class="thead">
-    <a class="back" href="#bugun">← Konular</a>
-    <div class="eyebrow" style="color:var(--c)">Histoloji · Ders 3</div>
+    <a class="back" href="#bugun"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Ana sayfa</a>
     <h1>Epitel Doku</h1>
-    <div class="src">Dr. Öğr. Üyesi Betül Zehra Karip · kaynak: 3) Epitel Doku.pdf</div>
+    <div class="eyebrow" style="color:var(--c)">Histoloji · Ders 3</div>
+    <div class="src">Dr. Öğr. Üyesi Betül Zehra Karip · ders slaytları</div>
     <div class="row"><button class="pill readbtn" data-read="epitel" aria-pressed="false">Okudum olarak işaretle</button></div>
   </div>
   <nav class="toc"></nav>
 
-  <div class="callout star"><span class="lab">Hoca "sorar" dedi</span><ul>
-    <li><b>Tek katlı (basit) yassı epitel nerelerde bulunur?</b> Kan damarları (endotel), alveoller, Bowman kapsülü, periton ve perikard (mezotel)</li>
-    <li><b>Endotel = tek katlı yassı epitel</b>; bütün kan damarlarının iç yüzü</li>
-    <li>Slayta elle not: <b>stereosilyalar aktif olarak hareket etmez</b></li>
-  </ul></div>
   <div class="callout exam"><span class="lab">Sınavda çıkar · mutlaka bil</span><ol>
     <li>Epitelin 3 özelliği ve <b>damarsız</b> olması; 3 yüzey: apikal, lateral, bazal</li>
     <li>Sınıflama: tabaka sayısı + <b>en üst</b> hücrenin şekli; her tipin <b>örnek yeri</b></li>
@@ -2942,6 +3105,11 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
     <li>Hücre bağlantıları: <b>zonula okludens, zonula adherens, desmozom, gap junction, hemidesmozom, fokal adezyon</b>; proteinleri</li>
     <li>Bezler: ekzokrin/endokrin/parakrin; <b>merokrin, apokrin, holokrin</b>; basit/bileşik, tübüler/asiner; seröz/müköz</li>
   </ol></div>
+  <div class="callout star"><span class="lab">Hoca "sorar" dedi</span><ul>
+    <li><b>Tek katlı (basit) yassı epitel nerelerde bulunur?</b> Kan damarları (endotel), alveoller, Bowman kapsülü, periton ve perikard (mezotel)</li>
+    <li><b>Endotel = tek katlı yassı epitel</b>; bütün kan damarlarının iç yüzü</li>
+    <li>Slayta elle not: <b>stereosilyalar aktif olarak hareket etmez</b></li>
+  </ul></div>
 
   <h2 id="e-genel">Doku ve epitel</h2>
   <ul>
@@ -3186,7 +3354,7 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
   </table></div>
   <div class="callout tip"><span class="lab">Diş hekimliği bağlantısı</span><p>Tükürük bezleri: <b>parotis seröz</b>, <b>sublingual (dil altı) müköz</b>, <b>submandibular seromüköz</b> (seröz baskın, standart bilgi). Ağız mukozası keratinize olmayan/orta keratinize çok katlı yassı epitel; ağız tabanı ve yanaklar keratinize değildir.</p></div>
 
-  <div class="tend"><button class="btn" data-cards="epitel">Bu konunun kartları</button><button class="btn ghost" data-quiz="epitel">Konu testi</button><a class="btn ghost pdf-link" href="ozet-histoloji.pdf" target="_blank" rel="noopener" data-file="Histoloji-Ozet.pdf" style="text-decoration:none">Histoloji PDF</a></div>
+  <div class="tend"><button class="btn" data-cards="epitel">Bu konunun kartları</button><button class="btn ghost" data-quiz="epitel">Konu testi</button><button class="pill readbtn" data-read="epitel" aria-pressed="false">Okudum olarak işaretle</button><span class="tend-pdf"><a class="pdf-link" href="ozet-histoloji.pdf" target="_blank" rel="noopener" data-file="Histoloji-Ozet.pdf" data-title="Histoloji özeti">Histoloji özeti · renkli PDF</a><a class="pdf-link" href="ozet-histoloji-sb.pdf" target="_blank" rel="noopener" data-file="Histoloji-Ozet-SB.pdf" data-title="Histoloji özeti · siyah-beyaz">Siyah-beyaz baskı</a></span></div>
 </main>
 
 <!-- ============ CARDS ============ -->
@@ -3198,17 +3366,18 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
     <div class="flash" id="flash" tabindex="0" role="button" aria-label="Kartı çevir">
       <div class="flash-in">
         <div class="face front"><div class="top"><span id="fc-topic"></span><span class="mono" id="fc-n"></span></div><div class="q" id="fc-q"></div><div class="hint">Cevap için dokun</div></div>
-        <div class="face back"><div class="top"><span>Cevap</span></div><div class="a" id="fc-a"></div><div class="hint">Biliyor muydun?</div></div>
+        <div class="face back"><div class="top"><span id="fc-topic2">Cevap</span></div><div class="a" id="fc-a"></div><div class="hint">Biliyor muydun?</div></div>
       </div>
     </div>
-    <div class="fc-ctl"><button class="btn again" id="fc-again">Tekrar gelsin</button><button class="btn know" id="fc-know">Biliyorum</button></div>
-    <div class="counter" id="fc-count"></div>
+    <div class="fc-ctl"><button class="btn reveal" id="fc-reveal" type="button">Cevabı gör</button><button class="btn again" id="fc-again">Tekrar gelsin</button><button class="btn know" id="fc-know">Biliyorum</button></div>
+    <div class="counter"><span id="fc-count"></span><button class="linkbtn" id="fc-undo" type="button" hidden>Son kartı geri al</button></div>
+    <div class="sr" id="fc-live" aria-live="polite"></div>
   </div>
   <div class="result" id="fc-done" hidden>
     <div class="eyebrow">Deste bitti</div>
     <div class="score" id="fc-score">12/12</div>
     <p id="fc-msg" style="color:var(--muted)"></p>
-    <div class="row"><button class="btn" id="fc-restart" style="background:var(--c-rad)">Yeniden karıştır</button><a class="btn ghost" href="#bugun" style="text-decoration:none">Ana sayfa</a></div>
+    <div class="row"><button class="btn" id="fc-restart" style="background:var(--c-rad)">Yeniden karıştır</button><button class="btn ghost" id="fc-undo2" type="button" hidden>Son kartı geri al</button><a class="btn ghost" href="#bugun" style="text-decoration:none">Ana sayfa</a></div>
   </div>
 </main>
 
@@ -3222,7 +3391,7 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
       <div class="top"><span id="q-topic"></span><span class="mono" id="q-n"></span></div>
       <div class="q" id="q-q"></div>
       <div class="opts" id="q-opts"></div>
-      <div class="expl" id="q-expl" hidden></div>
+      <div class="expl" id="q-expl" hidden aria-live="polite"></div>
       <div style="margin-top:14px;display:flex;justify-content:flex-end"><button class="btn" id="q-next" hidden style="background:var(--ink);color:var(--bg)">Sonraki</button></div>
     </div>
   </div>
@@ -3242,7 +3411,7 @@ main.view[class*="t-"] > p,main.view[class*="t-"] > ul,main.view[class*="t-"] > 
 
 <nav class="nav" aria-label="Ana gezinme">
   <div class="in">
-    <a href="#bugun" data-nav="home"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Bugün</a>
+    <a href="#bugun" data-nav="home"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Ana sayfa</a>
     <a href="#kartlar" data-nav="kartlar"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="14" height="14" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v12"/></svg>Kartlar</a>
     <a href="#test" data-nav="test"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>Test</a>
   </div>
@@ -3267,6 +3436,12 @@ const TOPICS = [
   {id:"epitel", short:"Epitel", title:"Epitel Doku", num:"Histoloji · Ders 3", badge:"Yeni"}
 ];
 const TMAP = Object.fromEntries(TOPICS.map(t => [t.id, t]));
+const SUBJECTS = [{id:"fizyoloji", name:"Fizyoloji", topics:["hucre", "pss1", "sinaps", "oss", "kas", "sinir1", "sinir2"]},{id:"radyoloji", name:"Radyoloji", topics:["rad"]},{id:"anatomi", name:"Anatomi", topics:["kafa", "boyun"]},{id:"histoloji", name:"Histoloji", topics:["his1", "his2", "epitel"]}];
+const SMAP = Object.fromEntries(SUBJECTS.map(s => [s.id, s]));
+const T2S = {}; SUBJECTS.forEach(s => s.topics.forEach(t => { T2S[t] = s.id; }));
+function topicsOf(mode){ return mode.startsWith("s:") ? SMAP[mode.slice(2)].topics : [mode]; }
+const MARK_OK = '<svg class="qi" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+const MARK_NO = '<svg class="qi" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>';
 
 const CARDS = {
 hucre:[
@@ -4199,7 +4374,7 @@ const QX = [
 
 ["boyun","Boyunun alt sınırı?",["Apertura thoracis superior","Clavicula alt kenarı","Os hyoideum","Cartilago cricoidea"],"Üstte basis cranii ve mandibula alt kenarı."],
 ["boyun","Boyun kökünü thorax'tan ayıran yapılardan olmayan?",["Cartilago thyroidea","Manubrium sterni","1. kosta","T1 vertebra"],"Apertura thoracis superior'un sınırları."],
-["boyun","Platysma'yı saran fasya?",["Lamina superficialis fascia cervicalis","Lamina pretrachealis","Lamina prevertebralis","Vagina carotica"],"Fascia subcutanea; yüzeyel lenf düğümlerini de içerir."],
+["boyun","Platysma'yı saran fasya?",["Lamina superficialis (fascia subcutanea)","Lamina superficialis fasciae profundae (investing)","Lamina pretrachealis","Lamina prevertebralis"],"Slayttaki 1. tabaka: deri altı yüzeyel fasyanın devamı, yüzeyel lenf düğümlerini de içerir. Investing tabaka ise SCM ve trapezius'u sarar."],
 ["boyun","Investing fasyanın sardığı yapılardan olmayan?",["Trachea","M. trapezius","M. sternocleidomastoideus","Gl. submandibularis"],"Trachea'yı lamina pretrachealis sarar."],
 ["boyun","Larynx, trachea, tiroid, pharynx ve oesophagus'u saran fasya?",["Lamina media (pretrachealis)","Lamina superficialis","Lamina prevertebralis","Fascia alaris"],"Yanlarda carotis kılıfına katılır."],
 ["boyun","Vagina carotica'nın içeriğinden olmayan?",["N. phrenicus","A. carotis communis","V. jugularis interna","N. vagus"],"N. phrenicus scalenus anterior önünde iner."],
@@ -4476,30 +4651,49 @@ function streakCount(){
   while(doneOn(dayKey(cur))){ n++; cur.setDate(cur.getDate()-1); }
   return n;
 }
-function renderStreak(){ const n = streakCount(); document.getElementById("streak").textContent = n + " gün seri"; }
+function renderStreak(){ const n = streakCount(), el = document.getElementById("streak"); el.textContent = n + " gün seri"; el.hidden = n === 0; }
 
 /* ---------- home ---------- */
 function topicProgress(id){ const cs = ALLCARDS.filter(c => c.t === id); const k = cs.filter(c => known.has(c.id)).length; const qq = QUIZ.filter(q => q.t === id); return {k, n:cs.length, qn:qq.length, qk:qq.filter(q => qok.has(q.id)).length}; }
 function renderHome(){
-  const g = document.getElementById("topic-grid"); g.innerHTML = "";
   let tk = 0, tn = 0;
-  for(const t of TOPICS){
-    const p = topicProgress(t.id); tk += p.k; tn += p.n;
-    const a = document.createElement("a"); a.href = "#"+t.id; a.className = "tcard t-"+t.id;
-    a.innerHTML = (t.badge ? '<span class="badge">'+t.badge+'</span>' : '') +
-      '<span class="num">'+t.num+'</span><h3>'+t.title+'</h3>' +
-      (readSet.has(t.id) ? '<span class="read">Okundu</span>' : '') +
-      '<div class="meta"><span>'+p.n+' kart · '+p.qn+' soru</span><span>'+p.k+'/'+p.n+' kart · '+p.qk+'/'+p.qn+' soru</span></div>' +
-      '<div class="bar"><i style="width:'+(p.n ? Math.round(p.k/p.n*100) : 0)+'%"></i></div>';
-    g.appendChild(a);
+  for(const s of SUBJECTS){
+    const g = document.querySelector('[data-grid="' + s.id + '"]'); g.innerHTML = "";
+    for(const id of s.topics){
+      const t = TMAP[id], p = topicProgress(id); tk += p.k; tn += p.n;
+      const a = document.createElement("a"); a.href = "#"+id; a.className = "tcard t-"+id;
+      const started = p.k || p.qk;
+      a.innerHTML = (t.badge ? '<span class="badge">'+t.badge+'</span>' : '') +
+        '<span class="num">'+t.num+'</span><h3>'+t.title+'</h3>' +
+        (readSet.has(id) ? '<span class="read">Okundu</span>' : '') +
+        '<div class="meta"><span>'+(started ? p.k+'/'+p.n+' kart · '+p.qk+'/'+p.qn+' soru' : p.n+' kart · '+p.qn+' soru')+'</span></div>' +
+        '<div class="bar"><i style="width:'+(p.n ? Math.round(p.k/p.n*100) : 0)+'%"></i></div>';
+      g.appendChild(a);
+    }
   }
   document.getElementById("overall").textContent = tk + " / " + tn + " kart öğrenildi";
   const dt = new Date().toLocaleDateString("tr-TR", {weekday:"long", day:"numeric", month:"long"});
-  document.getElementById("today-date").textContent = dt + " · günlük tekrar";
+  document.getElementById("today-date").textContent = dt;
   const hr = new Date().getHours();
   document.getElementById("hello").textContent = hr < 5 ? "Gece çalışması" : hr < 12 ? "Günaydın" : hr < 18 ? "İyi çalışmalar" : "İyi akşamlar";
+  setExam(store.get("exam", "fizyoloji"));
   renderHomeToday();
 }
+function setExam(id, focus){
+  if(!SMAP[id]) id = "fizyoloji";
+  store.set("exam", id);
+  document.querySelectorAll('.exam-tabs [role="tab"]').forEach(b => {
+    const on = b.dataset.exam === id; b.setAttribute("aria-selected", on); b.tabIndex = on ? 0 : -1; if(on && focus) b.focus();
+  });
+  document.querySelectorAll(".exam-panel").forEach(p => { p.hidden = p.id !== "ex-" + id; });
+}
+document.querySelectorAll('.exam-tabs [role="tab"]').forEach((b, i, all) => {
+  b.addEventListener("click", () => setExam(b.dataset.exam));
+  b.addEventListener("keydown", e => {
+    const n = all.length, j = e.key === "ArrowRight" ? (i+1)%n : e.key === "ArrowLeft" ? (i-1+n)%n : e.key === "Home" ? 0 : e.key === "End" ? n-1 : -1;
+    if(j >= 0){ e.preventDefault(); setExam(all[j].dataset.exam, true); }
+  });
+});
 function renderHomeToday(){
   const d = daysDone()[TODAY] || {};
   document.getElementById("dc-done").hidden = !d.cards;
@@ -4512,7 +4706,7 @@ function renderHomeToday(){
 document.querySelectorAll("main.view[class*='t-']").forEach(m => {
   const toc = m.querySelector(".toc"); if(!toc) return;
   m.querySelectorAll("h2[id]").forEach(h => {
-    const b = document.createElement("button"); b.textContent = h.textContent;
+    const b = document.createElement("button"); b.type = "button"; b.textContent = h.textContent; b.dataset.target = h.id;
     b.addEventListener("click", () => h.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"}));
     toc.appendChild(b);
   });
@@ -4527,7 +4721,7 @@ document.querySelectorAll(".readbtn").forEach(b => b.addEventListener("click", (
 /* ---------- cards ---------- */
 let deck = [], di = 0, deckMode = "daily", deckKnownNow = 0;
 function buildDeck(mode){
-  deckMode = mode;
+  deckMode = mode; lastAns = null;
   if(mode === "daily"){
     const r = rng("cards"+TODAY);
     const sh = shuffle(ALLCARDS, r);
@@ -4538,7 +4732,7 @@ function buildDeck(mode){
   } else if(mode === "all"){
     deck = shuffle(ALLCARDS);
   } else {
-    const cs = ALLCARDS.filter(c => c.t === mode);
+    const ids = topicsOf(mode), cs = ALLCARDS.filter(c => ids.includes(c.t));
     deck = shuffle(cs.filter(c => !known.has(c.id))).concat(shuffle(cs.filter(c => known.has(c.id))));
   }
   di = 0; deckKnownNow = 0;
@@ -4547,15 +4741,25 @@ function buildDeck(mode){
 }
 function renderFilters(elId, active, onPick){
   const el = document.getElementById(elId); el.innerHTML = "";
-  const opts = [["daily","Günün seti"],["all","Tümü"]].concat(TOPICS.map(t => [t.id, t.short]));
-  for(const [k, label] of opts){
-    const b = document.createElement("button"); b.textContent = label; if(k === active) b.className = "on";
-    b.addEventListener("click", () => onPick(k)); el.appendChild(b);
-  }
+  const sid = active.startsWith("s:") ? active.slice(2) : T2S[active];
+  const row = (opts, cls) => {
+    const r = document.createElement("div"); r.className = "frow" + (cls ? " " + cls : "");
+    for(const [k, label, on] of opts){
+      const b = document.createElement("button"); b.type = "button"; b.textContent = label;
+      if(on){ b.className = "on"; b.setAttribute("aria-pressed", "true"); } else b.setAttribute("aria-pressed", "false");
+      b.addEventListener("click", () => onPick(k)); r.appendChild(b);
+    }
+    el.appendChild(r);
+  };
+  row([["daily","Günün seti",active === "daily"]].concat(SUBJECTS.map(s => ["s:"+s.id, s.name, s.id === sid])).concat([["all","Tümü",active === "all"]]));
+  if(sid && SMAP[sid].topics.length > 1)
+    row([["s:"+sid, "Tüm " + SMAP[sid].name.toLocaleLowerCase("tr-TR"), active === "s:"+sid]].concat(SMAP[sid].topics.map(t => [t, TMAP[t].short, active === t])), "sub");
 }
+let lastAns = null;
 function showCard(){
   const area = document.getElementById("fc-area"), done = document.getElementById("fc-done");
-  const flash = document.getElementById("flash"); flash.classList.remove("flipped");
+  const flash = document.getElementById("flash"); flash.classList.remove("flipped"); area.classList.remove("shown");
+  document.getElementById("fc-undo").hidden = document.getElementById("fc-undo2").hidden = !lastAns;
   if(di >= deck.length){
     area.hidden = true; done.hidden = false;
     document.getElementById("fc-score").textContent = deckKnownNow + "/" + deck.length;
@@ -4567,21 +4771,46 @@ function showCard(){
   const c = deck[di], t = TMAP[c.t];
   document.getElementById("v-kartlar").className = "wrap view t-" + c.t;
   document.getElementById("fc-topic").textContent = t.short;
+  document.getElementById("fc-topic2").textContent = t.short + " · cevap";
   document.getElementById("fc-n").textContent = (di+1) + " / " + deck.length;
   setTimeout(() => { document.getElementById("fc-q").textContent = c.q; document.getElementById("fc-a").textContent = c.a; }, flash.classList.contains("flipped") ? 200 : 0);
   document.getElementById("fc-q").textContent = c.q; document.getElementById("fc-a").textContent = c.a;
   document.getElementById("fc-prog").style.width = (di / deck.length * 100) + "%";
   document.getElementById("fc-count").textContent = known.has(c.id) ? "Bu kartı daha önce bildin" : "";
 }
-document.getElementById("flash").addEventListener("click", e => e.currentTarget.classList.toggle("flipped"));
-document.getElementById("flash").addEventListener("keydown", e => { if(e.key === " " || e.key === "Enter"){ e.preventDefault(); e.currentTarget.classList.toggle("flipped"); } });
-document.getElementById("fc-know").addEventListener("click", () => { const c = deck[di]; if(!c) return; known.add(c.id); saveKnown(); deckKnownNow++; di++; showCard(); });
-document.getElementById("fc-again").addEventListener("click", () => { const c = deck[di]; if(!c) return; known.delete(c.id); saveKnown(); di++; showCard(); });
+function flipCard(){
+  const flash = document.getElementById("flash"), area = document.getElementById("fc-area");
+  const on = flash.classList.toggle("flipped");
+  if(on && !area.classList.contains("shown")){ area.classList.add("shown"); document.getElementById("fc-live").textContent = "Cevap: " + document.getElementById("fc-a").textContent; document.getElementById("fc-know").focus({preventScroll:true}); }
+}
+function answerCard(isKnown){
+  const c = deck[di]; if(!c || !document.getElementById("fc-area").classList.contains("shown")) return;
+  lastAns = {id:c.id, was:known.has(c.id), k:isKnown};
+  if(isKnown){ known.add(c.id); deckKnownNow++; } else known.delete(c.id);
+  const refocus = document.activeElement && document.activeElement.closest && document.activeElement.closest(".fc-ctl");
+  saveKnown(); di++; showCard();
+  if(refocus) (document.getElementById("fc-area").hidden ? document.getElementById("fc-restart") : document.getElementById("flash")).focus({preventScroll:true});
+}
+function undoCard(){
+  if(!lastAns || di === 0) return;
+  if(lastAns.was) known.add(lastAns.id); else known.delete(lastAns.id);
+  if(lastAns.k) deckKnownNow--;
+  saveKnown(); di--; lastAns = null; showCard();
+}
+document.getElementById("flash").addEventListener("click", flipCard);
+document.getElementById("flash").addEventListener("keydown", e => { if(e.key === " " || e.key === "Enter"){ e.preventDefault(); flipCard(); } });
+document.getElementById("fc-reveal").addEventListener("click", flipCard);
+document.getElementById("fc-know").addEventListener("click", () => answerCard(true));
+document.getElementById("fc-again").addEventListener("click", () => answerCard(false));
+document.getElementById("fc-undo").addEventListener("click", undoCard);
+document.getElementById("fc-undo2").addEventListener("click", undoCard);
 document.getElementById("fc-restart").addEventListener("click", () => buildDeck(deckMode === "daily" ? "all" : deckMode));
 document.addEventListener("keydown", e => {
-  if(document.getElementById("v-kartlar").hidden) return;
-  if(e.key === "ArrowRight") document.getElementById("fc-know").click();
-  if(e.key === "ArrowLeft") document.getElementById("fc-again").click();
+  if(document.getElementById("v-kartlar").hidden || !document.getElementById("pv").hidden) return;
+  if((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "z"){ e.preventDefault(); undoCard(); return; }
+  if(e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+  if(!document.getElementById("fc-area").classList.contains("shown")){ flipCard(); return; }
+  answerCard(e.key === "ArrowRight");
 });
 
 /* ---------- quiz ---------- */
@@ -4595,7 +4824,7 @@ function buildQuiz(mode){
   qMode = mode;
   if(mode === "daily") qs = pickQs(QUIZ, 8, rng("quiz"+TODAY));
   else if(mode === "all") qs = pickQs(QUIZ, 20);
-  else qs = pickQs(QUIZ.filter(q => q.t === mode), 15);
+  else qs = pickQs(QUIZ.filter(q => topicsOf(mode).includes(q.t)), mode.startsWith("s:") ? 20 : 15);
   qs = qs.map(q => { const ord = shuffle([0,1,2,3]); return Object.assign({}, q, {o: ord.map(k => q.o[k]), a: ord.indexOf(q.a)}); });
   qi = 0; qScore = 0; qWrong = [];
   renderFilters("quiz-filters", qMode, m => buildQuiz(m));
@@ -4611,8 +4840,8 @@ function showQ(){
     const wl = document.getElementById("q-wrong"); wl.innerHTML = "";
     qWrong.forEach(q => { const li = document.createElement("li"); li.innerHTML = "<b></b><br><span></span>"; li.querySelector("b").textContent = q.q; li.querySelector("span").textContent = "Doğru: " + q.o[q.a] + " — " + q.e; wl.appendChild(li); });
     if(qMode !== "daily" && qMode !== "all"){
-      const pool = QUIZ.filter(q => q.t === qMode), ok = pool.filter(q => qok.has(q.id)).length;
-      document.getElementById("q-msg").textContent += " Bu konuda " + pool.length + " sorudan " + ok + " tanesini doğru cevapladın; yeni tur önce kalanları getirir.";
+      const pool = QUIZ.filter(q => topicsOf(qMode).includes(q.t)), ok = pool.filter(q => qok.has(q.id)).length;
+      document.getElementById("q-msg").textContent += (qMode.startsWith("s:") ? " Bu derste " : " Bu konuda ") + "" + pool.length + " sorudan " + ok + " tanesini doğru cevapladın; yeni tur önce kalanları getirir.";
     }
     if(qMode === "daily") markDone("quiz");
     return;
@@ -4630,34 +4859,64 @@ function showQ(){
   q.o.forEach((o, i) => {
     const b = document.createElement("button"); b.innerHTML = "<span>" + "ABCD"[i] + "</span><div></div>"; b.querySelector("div").textContent = o;
     b.addEventListener("click", () => {
-      [...box.children].forEach((x, j) => { x.disabled = true; if(j === q.a) x.classList.add("ok"); });
-      if(i === q.a){ qScore++; qok.add(q.id); ex.textContent = "Doğru. " + q.e; }
-      else { b.classList.add("no"); qok.delete(q.id); qWrong.push(q); ex.textContent = "Doğru cevap " + "ABCD"[q.a] + ". " + q.e; }
+      [...box.children].forEach((x, j) => { x.disabled = true; if(j === q.a){ x.classList.add("ok"); x.insertAdjacentHTML("beforeend", MARK_OK + '<span class="sr">' + (j === i ? "Senin cevabın, doğru" : "Doğru cevap") + "</span>"); } });
+      ex.innerHTML = "<b></b> <span></span>";
+      if(i === q.a){ qScore++; qok.add(q.id); ex.querySelector("b").textContent = "Doğru."; ex.querySelector("span").textContent = q.e; }
+      else { b.classList.add("no"); b.insertAdjacentHTML("beforeend", MARK_NO + '<span class="sr">Senin cevabın, yanlış</span>'); qok.delete(q.id); qWrong.push(q); ex.querySelector("b").textContent = "Yanlış. Doğru cevap " + "ABCD"[q.a] + "."; ex.querySelector("span").textContent = q.e; }
+      ex.className = "expl " + (i === q.a ? "is-ok" : "is-no");
       store.set("qok", [...qok]);
       ex.hidden = false; nx.hidden = false; nx.textContent = qi === qs.length - 1 ? "Sonucu gör" : "Sonraki"; nx.focus({preventScroll:true});
+      requestAnimationFrame(() => nx.scrollIntoView({block:"nearest", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"}));
     });
     box.appendChild(b);
   });
 }
 document.getElementById("q-next").addEventListener("click", () => { qi++; showQ(); });
+document.addEventListener("keydown", e => {
+  if(document.getElementById("v-test").hidden || !document.getElementById("pv").hidden || e.metaKey || e.ctrlKey || e.altKey) return;
+  const box = document.getElementById("q-opts"), nx = document.getElementById("q-next"), k = e.key.toLowerCase();
+  const idx = "abcd".indexOf(k) >= 0 ? "abcd".indexOf(k) : "1234".indexOf(k);
+  if(k.length === 1 && idx >= 0 && box.children[idx] && !box.children[idx].disabled){ e.preventDefault(); box.children[idx].click(); }
+  else if((k === "enter" || k === "arrowright") && !nx.hidden && document.activeElement !== nx){ e.preventDefault(); nx.click(); }
+});
 document.getElementById("q-restart").addEventListener("click", () => buildQuiz(qMode === "daily" ? "all" : qMode));
 document.getElementById("q-restart").textContent = "Yeni tur";
 
 /* ---------- router ---------- */
-let pending = null;
+let pending = null, curView = null;
+const scrollPos = (() => { try{ return JSON.parse(sessionStorage.getItem("sd:scroll") || "{}"); }catch(e){ return {}; } })();
+try{ history.scrollRestoration = "manual"; }catch(e){}
 function route(){
   const h = (location.hash || "#bugun").slice(1);
+  if(curView !== null){ scrollPos[curView] = Math.round(window.scrollY); try{ sessionStorage.setItem("sd:scroll", JSON.stringify(scrollPos)); }catch(e){} }
   document.querySelectorAll("main.view").forEach(v => v.hidden = true);
   let navKey = "home";
-  if(TMAP[h]) { document.getElementById("v-"+h).hidden = false; navKey = ""; }
+  if(TMAP[h]) { document.getElementById("v-"+h).hidden = false; navKey = ""; store.set("exam", T2S[h]); }
   else if(h === "kartlar"){ document.getElementById("v-kartlar").hidden = false; navKey = "kartlar"; buildDeck(pending || (deck.length && di < deck.length ? deckMode : "daily")); }
   else if(h === "test"){ document.getElementById("v-test").hidden = false; navKey = "test"; buildQuiz(pending || "daily"); }
   else { document.getElementById("v-home").hidden = false; renderHome(); }
   pending = null;
   document.querySelectorAll(".nav a").forEach(a => a.toggleAttribute("aria-current", a.dataset.nav === navKey) || (a.dataset.nav === navKey && a.setAttribute("aria-current","page")));
   document.querySelectorAll(".nav a").forEach(a => { if(a.dataset.nav === navKey) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
-  window.scrollTo(0, 0);
+  const view = TMAP[h] || h === "kartlar" || h === "test" ? h : "bugun";
+  window.scrollTo(0, view === "kartlar" || view === "test" ? 0 : (scrollPos[view] || 0));
+  curView = view; spyTick();
 }
+let spyRaf = 0;
+function spyTick(){
+  spyRaf = 0;
+  const m = TMAP[curView] && document.getElementById("v-" + curView); if(!m) return;
+  const toc = m.querySelector(".toc"); if(!toc || !toc.children.length) return;
+  let cur = null;
+  for(const hd of m.querySelectorAll("h2[id]")){ if(hd.getBoundingClientRect().top < 140) cur = hd.id; else break; }
+  let act = null;
+  for(const b of toc.children){ const on = b.dataset.target === cur; if(on){ b.setAttribute("aria-current", "true"); act = b; } else b.removeAttribute("aria-current"); }
+  if(act && matchMedia("(min-width:900px)").matches){
+    const tr = toc.getBoundingClientRect(), br = act.getBoundingClientRect();
+    if(br.top < tr.top) toc.scrollTop -= tr.top - br.top + 8; else if(br.bottom > tr.bottom) toc.scrollTop += br.bottom - tr.bottom + 8;
+  }
+}
+window.addEventListener("scroll", () => { if(!spyRaf) spyRaf = requestAnimationFrame(spyTick); }, {passive:true});
 function go(hash, mode){ pending = mode; if(location.hash === hash) route(); else location.hash = hash; }
 document.querySelectorAll("[data-cards]").forEach(b => b.addEventListener("click", () => go("#kartlar", b.dataset.cards)));
 document.querySelectorAll("[data-quiz]").forEach(b => b.addEventListener("click", () => go("#test", b.dataset.quiz)));
@@ -4785,8 +5044,8 @@ window.addEventListener("hashchange", route);
       if(!inClaude) return; // normal web sitesi (ör. github.io): tarayıcı doğrudan indirir
       e.preventDefault();
       const href = a.getAttribute("href"), name = a.dataset.file;
-      const card = a.closest(".pdfc"), base = card ? card.querySelector("b").textContent : a.textContent;
-      const title = (a.classList.contains("pbw") ? base + " · siyah-beyaz" : base).trim();
+      const card = a.closest(".pdfc"), base = card ? card.querySelector("b").textContent : (a.dataset.title || a.textContent);
+      const title = (card && a.classList.contains("pbw") ? base + " · siyah-beyaz" : base).trim();
       if(dl){
         try{
           say("PDF hazırlanıyor…");
@@ -4810,7 +5069,7 @@ window.addEventListener("hashchange", route);
   function apply(){
     document.querySelectorAll(".fig svg[viewBox]").forEach(s => {
       const w = +s.getAttribute("viewBox").trim().split(/\s+/)[2];
-      s.style.minWidth = (mq.matches && w) ? Math.round(w * 1.15) + "px" : "";
+      s.style.minWidth = (mq.matches && w) ? Math.round(w * 1.25) + "px" : "";
     });
   }
   apply();
