@@ -468,6 +468,9 @@ section.exam > h2{margin-top:20px}
 .chart.anim .tb{animation:t-rise .55s cubic-bezier(.2,.8,.2,1) var(--d) both}
 .chart.anim .les rect:not(.hatch){animation:t-pen .7s cubic-bezier(.4,.2,.2,1) calc(var(--d) + 280ms) both;stroke-dasharray:200;stroke-dashoffset:0}
 .chart.anim .st-done rect{animation:t-fill .5s ease-out calc(var(--d) + 380ms) both}
+.chart.anim-q .on .tb{animation:t-rise .5s cubic-bezier(.2,.8,.2,1) var(--d) both}
+.chart.anim-q .les.on rect:not(.hatch):not(.hit){animation:t-pen .6s cubic-bezier(.4,.2,.2,1) calc(var(--d) + 200ms) both;stroke-dasharray:200}
+.chart.anim-q .les.on .tn{animation:fade-in .4s ease-out calc(var(--d) + 120ms) both}
 @keyframes t-rise{from{opacity:0;transform:translateY(calc(var(--o) * 18px))}to{opacity:1;transform:none}}
 @keyframes t-pen{from{stroke-dashoffset:200}to{stroke-dashoffset:0}}
 @keyframes t-fill{from{fill-opacity:0}to{fill-opacity:1}}
@@ -631,7 +634,7 @@ th{font-family:var(--font-d);font-size:15px;letter-spacing:.02em;background:var(
 }
 @media (prefers-reduced-motion:reduce){
   .opts .ring path{animation:none!important;stroke-dashoffset:0}
-  .chart.anim .tb,.chart.anim .les rect,.exam-panel,.flash,.flash::after,.opts button .qi path,.result .score::after,.fig svg.drawing text{animation:none!important}
+  .chart.anim .tb,.chart.anim .les rect,.chart.anim-q .tb,.chart.anim-q .les rect,.chart.anim-q .tn,.exam-panel,.flash,.flash::after,.opts button .qi path,.result .score::after,.fig svg.drawing text{animation:none!important}
   .opts button .qi path{stroke-dashoffset:0}
   ::view-transition-old(root),::view-transition-new(root){animation:none}
 }
@@ -4980,12 +4983,13 @@ function renderHome(){
 }
 function setExam(id, focus){
   if(!SMAP[id]) id = "fizyoloji";
+  const prevQ = QUAD[store.get("exam", "fizyoloji")];
   store.set("exam", id);
   document.querySelectorAll('.exam-tabs [role="tab"]').forEach(b => {
     const on = b.dataset.exam === id; b.setAttribute("aria-selected", on); b.tabIndex = on ? 0 : -1; if(on && focus) b.focus();
   });
   document.querySelectorAll(".exam-panel").forEach(p => { p.hidden = p.id !== "ex-" + id; });
-  renderChart(false);
+  renderChart(prevQ && prevQ !== QUAD[id] ? "q" : false, prevQ);
 }
 document.querySelectorAll('.exam-tabs [role="tab"]').forEach((b, i, all) => {
   b.addEventListener("click", () => setExam(b.dataset.exam));
@@ -5011,7 +5015,7 @@ function topicState(id){
 }
 const TOOTH_W = [1, .88, 1, 1.05, 1.05, 1.32, 1.32, 1.2], TOOTH_H = [44, 41, 48, 40, 40, 36, 36, 34];
 const CODE2T = {}; Object.keys(FDI).forEach(t => { CODE2T[FDI[t]] = t; });
-function renderChart(animate){
+function renderChart(animate, prevQ){
   const el = document.getElementById("chart"); if(!el) return;
   const cur = QUAD[store.get("exam", "fizyoloji")] || 1, last = store.get("last", null);
   const cx = 320, rx = 282, ry = 148, top = 196, bot = 236, tot = TOOTH_W.reduce((a, b) => a + b, 0), span = 80 * Math.PI / 180;
@@ -5037,7 +5041,7 @@ function renderChart(animate){
       const code = q * 10 + i + 1, tid = CODE2T[code];
       const shape = '<rect x="' + (-w / 2).toFixed(1) + '" y="' + (-ht / 2) + '" width="' + w.toFixed(1) + '" height="' + ht + '" rx="' + (i < 3 ? 9 : 7) + '"/>';
       const tf = 'translate(' + x.toFixed(1) + ' ' + y.toFixed(1) + ') rotate(' + rot.toFixed(1) + ')';
-      const d = animate ? (k * 22) : 0; k++;
+      const d = animate === true ? (k * 22) : (animate === "q" && q === cur) ? ((small ? 260 : 0) + i * 45) : 0; k++;
       if(tid){
         const st = topicState(tid), T = TMAP[tid];
         s += '<a href="#' + tid + '" class="tooth les st-' + st + (q === cur ? ' on' : '') + '" data-t="' + tid + '" style="--d:' + d + 'ms;--o:' + (upper ? -1 : 1) + '" aria-label="' + code + ' ' + T.title + ', ' + STATE_TXT[st] + '">' +
@@ -5055,8 +5059,19 @@ function renderChart(animate){
   el.innerHTML = s;
   const pn = document.getElementById("pen-note");
   if(pn){ if(last && TMAP[last]){ pn.hidden = false; pn.href = "#" + last; pn.textContent = "kaldığın yer → " + FDI[last] + " " + TMAP[last].title; } else pn.hidden = true; }
-  el.classList.toggle("anim", !!animate);
-  clearTimeout(renderChart.t); if(animate) renderChart.t = setTimeout(() => el.classList.remove("anim"), 1900);
+  el.classList.toggle("anim", animate === true); el.classList.toggle("anim-q", animate === "q");
+  clearTimeout(renderChart.t); if(animate) renderChart.t = setTimeout(() => el.classList.remove("anim", "anim-q"), 1900);
+  if(animate === "q" && small && prevQ && VB[prevQ] && !REDUCE.matches){
+    const svg = el.querySelector("svg"), a = VB[prevQ].split(" ").map(Number), b = VB[cur].split(" ").map(Number), t0 = performance.now(), dur = 560;
+    svg.setAttribute("viewBox", a.join(" "));
+    cancelAnimationFrame(renderChart.raf);
+    const step = now => {
+      const p = Math.min(1, (now - t0) / dur), e = p < .5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
+      svg.setAttribute("viewBox", a.map((v, j) => (v + (b[j] - v) * e).toFixed(1)).join(" "));
+      if(p < 1) renderChart.raf = requestAnimationFrame(step);
+    };
+    renderChart.raf = requestAnimationFrame(step);
+  }
   const cap = document.getElementById("chart-cap"), base = "Her diş bir slayt. Dişe dokun, slaytı aç.";
   el.querySelectorAll(".les").forEach(a => {
     const say = () => { const id = a.dataset.t; cap.textContent = FDI[id] + " · " + TMAP[id].title + " · " + STATE_TXT[topicState(id)]; };
