@@ -4,12 +4,25 @@
   "start_url": "./#bugun",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#F6F8F7",
-  "theme_color": "#0F7A84",
+  "background_color": "#FFF4F8",
+  "theme_color": "#D6457A",
   "lang": "tr",
   "icons": [
-    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
-    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"},
-    {"src": "icon.svg", "sizes": "any", "type": "image/svg+xml"}
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
   ]
 }

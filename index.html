@@ -1,15 +1,15 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="manifest.webmanifest"><meta name="apple-mobile-web-app-title" content="Ders Notları"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#F6F8F7" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#0E1719" media="(prefers-color-scheme: dark)"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="manifest.webmanifest"><meta name="apple-mobile-web-app-title" content="Ders Notları"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#FFF4F8" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1A0F15" media="(prefers-color-scheme: dark)"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Eda'nın Ders Notları</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500&family=Caveat:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500&family=Caveat:wght@600;700&display=swap">
 <style>
 :root{
-  --bg:#F6F8F7; --surface:#FFFFFF; --surface-2:#EEF5F4; --ink:#14202A; --muted:#4A5E66; --line:#C6DCDD; --form:#0F7A84; --pen-red:#D7262F; --pen-blue:#2149C4;
-  --c-sinaps:#0F7A84; --c-oss:#0F7A84; --c-kas:#0F7A84; --c-sinir1:#0F7A84; --c-sinir2:#0F7A84; --c-rad:#0F7A84; --c-hucre:#0F7A84; --c-pss1:#0F7A84; --c-kafa:#0F7A84; --c-boyun:#0F7A84; --c-his1:#0F7A84; --c-his2:#0F7A84; --c-epitel:#0F7A84;
-  --good:#2149C4; --bad:#D7262F;
+  --bg:#FFF4F8; --surface:#FFFFFF; --surface-2:#FDE9F1; --ink:#2A1622; --muted:#6E4D5E; --line:#F2C9D8; --form:#C2346B; --form-line:#D6457A; --pen-red:#C81E3A; --pen-blue:#5B3FC4;
+  --c-sinaps:#C2346B; --c-oss:#C2346B; --c-kas:#C2346B; --c-sinir1:#C2346B; --c-sinir2:#C2346B; --c-rad:#C2346B; --c-hucre:#C2346B; --c-pss1:#C2346B; --c-kafa:#C2346B; --c-boyun:#C2346B; --c-his1:#C2346B; --c-his2:#C2346B; --c-epitel:#C2346B;
+  --good:#5B3FC4; --bad:#C81E3A;
   --c:var(--c-sinir1);
-  --font-d:"Archivo Narrow", "Arial Narrow", "Avenir Next Condensed", system-ui, sans-serif;
+  --font-d:"Nunito", "SF Pro Rounded", "Avenir Next", system-ui, sans-serif;
   --font-b:"Source Sans 3", -apple-system, "Segoe UI", system-ui, sans-serif;
   --font-m:"JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
   --font-h:"Caveat", "Bradley Hand", "Segoe Print", cursive;
@@ -18,16 +18,16 @@
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     color-scheme:dark;
-    --bg:#0E1719; --surface:#142124; --surface-2:#192B2F; --ink:#E6EEF0; --muted:#9DB3B8; --line:#2A4347; --form:#5BBCC4; --pen-red:#FF6F74; --pen-blue:#8EA8FF;
-    --c-sinaps:#5BBCC4; --c-oss:#5BBCC4; --c-kas:#5BBCC4; --c-sinir1:#5BBCC4; --c-sinir2:#5BBCC4; --c-rad:#5BBCC4; --c-hucre:#5BBCC4; --c-pss1:#5BBCC4; --c-kafa:#5BBCC4; --c-boyun:#5BBCC4; --c-his1:#5BBCC4; --c-his2:#5BBCC4; --c-epitel:#5BBCC4;
-    --good:#8EA8FF; --bad:#FF6F74;
+    --bg:#1A0F15; --surface:#24151D; --surface-2:#2E1A25; --ink:#F8E8F0; --muted:#C9A7B8; --line:#4A2C3B; --form:#FF7EAA; --form-line:#FF7EAA; --pen-red:#FF6B7F; --pen-blue:#A996FF;
+    --c-sinaps:#FF7EAA; --c-oss:#FF7EAA; --c-kas:#FF7EAA; --c-sinir1:#FF7EAA; --c-sinir2:#FF7EAA; --c-rad:#FF7EAA; --c-hucre:#FF7EAA; --c-pss1:#FF7EAA; --c-kafa:#FF7EAA; --c-boyun:#FF7EAA; --c-his1:#FF7EAA; --c-his2:#FF7EAA; --c-epitel:#FF7EAA;
+    --good:#A996FF; --bad:#FF6B7F;
   }
 }
 :root[data-theme="dark"]{
   color-scheme:dark;
-  --bg:#0E1719; --surface:#142124; --surface-2:#192B2F; --ink:#E6EEF0; --muted:#9DB3B8; --line:#2A4347; --form:#5BBCC4; --pen-red:#FF6F74; --pen-blue:#8EA8FF;
-  --c-sinaps:#5BBCC4; --c-oss:#5BBCC4; --c-kas:#5BBCC4; --c-sinir1:#5BBCC4; --c-sinir2:#5BBCC4; --c-rad:#5BBCC4; --c-hucre:#5BBCC4; --c-pss1:#5BBCC4; --c-kafa:#5BBCC4; --c-boyun:#5BBCC4; --c-his1:#5BBCC4; --c-his2:#5BBCC4; --c-epitel:#5BBCC4;
-  --good:#8EA8FF; --bad:#FF6F74;
+  --bg:#1A0F15; --surface:#24151D; --surface-2:#2E1A25; --ink:#F8E8F0; --muted:#C9A7B8; --line:#4A2C3B; --form:#FF7EAA; --form-line:#FF7EAA; --pen-red:#FF6B7F; --pen-blue:#A996FF;
+  --c-sinaps:#FF7EAA; --c-oss:#FF7EAA; --c-kas:#FF7EAA; --c-sinir1:#FF7EAA; --c-sinir2:#FF7EAA; --c-rad:#FF7EAA; --c-hucre:#FF7EAA; --c-pss1:#FF7EAA; --c-kafa:#FF7EAA; --c-boyun:#FF7EAA; --c-his1:#FF7EAA; --c-his2:#FF7EAA; --c-epitel:#FF7EAA;
+  --good:#A996FF; --bad:#FF6B7F;
 }
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--font-b);font-size:17px;line-height:1.55;-webkit-text-size-adjust:100%}
@@ -512,7 +512,7 @@ section.exam > h2{margin-top:20px}
 .exam-go .btn,.btn{border-radius:var(--r);font-family:var(--font-d);font-size:17px;letter-spacing:.02em}
 .btn{background:var(--ink);color:var(--surface)}
 .btn.ghost{background:var(--surface);color:var(--ink);border:1.5px solid var(--ink)}
-.exam-h{font-size:20px}
+.exam-h{font-size:20px;margin-top:26px;margin-bottom:0}
 .daily{border-top:2px solid var(--form)}
 .today button{border-radius:var(--r);border:1.5px solid var(--line);background:var(--surface)}
 .today .big{font-family:var(--font-d);font-size:22px}
@@ -643,7 +643,7 @@ th{font-family:var(--font-d);font-size:15px;letter-spacing:.02em;background:var(
 .fields{display:flex;gap:16px;font-family:var(--font-d);font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--form);white-space:nowrap}
 .fld i{font-style:normal;text-transform:none;letter-spacing:.01em;font-size:15px;font-weight:600;color:var(--ink);border-bottom:1px solid var(--form);padding:0 4px 1px;margin-left:5px;font-variant-numeric:tabular-nums}
 .fields .fld i#streak{font-family:var(--font-d);font-size:15px;font-weight:600;color:var(--ink);border-bottom:1px solid var(--form);padding:0 4px 1px;margin-left:5px}
-section.exam > h1{font-size:clamp(28px,6vw,40px);margin-top:22px;max-width:18ch}
+section.exam > h1{font-size:clamp(30px,7.7vw,40px);margin-top:22px;max-width:18ch}
 .chart .hit{fill:transparent!important;stroke:none!important;animation:none!important}
 .chart .les rect:not(.hit){stroke-width:3.2}
 .chart .les:not(.on) rect:not(.hatch):not(.hit){stroke-width:1.8}
@@ -663,6 +663,53 @@ section.exam > h1{font-size:clamp(28px,6vw,40px);margin-top:22px;max-width:18ch}
 
 .result{display:flex;flex-direction:column;align-items:center}
 .result .score{order:1}.result .eyebrow{order:2;margin-top:12px;text-transform:none;letter-spacing:.02em;font-size:16px}.result > p{order:3}.result .wrong-list{order:4;align-self:stretch}.result .row{order:5}
+/* ==== Pembe klinik + yumuşak biçim (2026-10-19) ==== */
+:root{--r:12px}
+h1,h2,h3{letter-spacing:-.01em}
+h1{font-weight:800}
+.chart .mid{stroke:var(--form-line)}
+.topbar,.nav{border-color:var(--form-line)}
+.topbar{border-bottom-width:1.5px}
+.brand{font-weight:800}
+.brand::before{content:"";display:inline-block;width:22px;height:22px;margin-right:8px;vertical-align:-4px;background:url(icon.svg) center/contain no-repeat;border-radius:7px}
+.fields{font-family:var(--font-b);font-weight:600;font-size:12px}
+.fld i,.fields .fld i#streak{font-family:var(--font-d);font-weight:700;border-bottom:2px dotted var(--form-line)}
+.doodle{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 10' preserveAspectRatio='none'%3E%3Cpath d='M2 6c12-5 22 4 34-1s22-4 34 0 22 4 34-1 10-2 14-1' fill='none' stroke='%235B3FC4' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") left bottom / 100% .32em no-repeat;padding-bottom:.12em}
+.chart .tn,.chart .qlab{font-family:var(--font-d)}
+.chart .tooth rect{rx:11}
+.exam-tabs{border-radius:16px;border-color:var(--form-line)}
+.exam-tabs button::before{font-weight:800;color:var(--form-line)}
+.exam-pdfs{border-radius:16px;border-color:var(--form-line)}
+.btn,.exam-go .btn{border-radius:999px;padding:12px 22px;font-weight:800}
+.btn.ghost{border-color:var(--form-line)}
+.pill,.filters button,.toc button,.streak{border-radius:999px}
+.callout{border-radius:14px}
+.callout .lab{border-radius:999px;padding:3px 11px}
+.callout.warn .lab{border-radius:999px}
+.box,.fig,.tbl,.calc,.steps li,.nt details,.formula,.today button,.howto{border-radius:14px}
+.steps li::before{border-radius:50%}
+.thead > .eyebrow{border-radius:999px;padding:2px 11px}
+.face,.qcard,.result{border-radius:20px}
+.face{border-color:var(--form-line)}
+.opts button{border-radius:14px}
+.lrow{border-radius:12px}
+.lrow:hover{background:var(--surface-2)}
+.lrow .fdi{font-weight:800}
+.tbl{border-color:var(--form-line)}
+th{font-weight:800}
+.prog{border-radius:4px}
+.prog i{border-radius:4px}
+.legend-chart svg rect{rx:5}
+.pen-note{font-size:28px}
+.result .score{font-weight:800}
+.nav a{font-family:var(--font-d);font-weight:700}
+@media (min-width:900px){
+  main.view[class*="t-"]:not(#v-kartlar):not(#v-test) > .toc{border-top-color:var(--form-line)}
+  main.view[class*="t-"]:not(#v-kartlar):not(#v-test) > .toc button{border-radius:10px}
+}
+:root[data-print="bw"]{--form-line:#000}
+:root[data-print="bw"] .doodle{background:none}
+
 /* siyah-beyaz baskı: işaretler renksiz de okunur */
 :root[data-print="bw"]{--form:#000;--pen-red:#000;--pen-blue:#000}
 
@@ -695,25 +742,25 @@ section.exam > h1{font-size:clamp(28px,6vw,40px);margin-top:22px;max-width:18ch}
     <div class="exam-panel" role="tabpanel" id="ex-fizyoloji" aria-labelledby="tab-fizyoloji" hidden>
       <div class="exam-pdfs"><div class="pdfc"><span class="strip" aria-hidden="true"><i class="t-hucre"></i><i class="t-pss1"></i><i class="t-sinaps"></i><i class="t-oss"></i><i class="t-kas"></i><i class="t-sinir1"></i><i class="t-sinir2"></i></span><a class="pdf-link pmain" href="ozet-fizyoloji-kisa.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Kisa-Ozet.pdf"><b>Sınav öncesi özeti<span class="sr"> · Fizyoloji</span></b><span>7 slaytın sınavlık özeti · 4 sayfa</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-fizyoloji-kisa-sb.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Kisa-Ozet-SB.pdf">Siyah-beyaz baskı</a></div><div class="pdfc"><span class="strip" aria-hidden="true"><i class="t-hucre"></i><i class="t-pss1"></i><i class="t-sinaps"></i><i class="t-oss"></i><i class="t-kas"></i><i class="t-sinir1"></i><i class="t-sinir2"></i></span><a class="pdf-link pmain" href="ozet-fizyoloji.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet.pdf"><b>Ayrıntılı özet<span class="sr"> · Fizyoloji</span></b><span>Hücre, PSS, sinaps, OSS ve refleksler, kas, sinir I–II · şemalı</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-fizyoloji-sb.pdf" target="_blank" rel="noopener" data-file="Fizyoloji-Ozet-SB.pdf">Siyah-beyaz baskı</a></div></div>
       <div class="exam-go"><button class="btn" data-cards="s:fizyoloji">Fizyoloji kartları</button><button class="btn ghost" data-quiz="s:fizyoloji">Fizyoloji testi</button></div>
-      <h3 class="exam-h">Slaytlar</h3><p class="exam-note">Her slayt “Sınavda çıkar · mutlaka bil” kutusuyla açılır.</p>
+      <h2 class="exam-h">Slaytlar</h2><p class="exam-note">Her slayt “Sınavda çıkar · mutlaka bil” kutusuyla açılır.</p>
       <div class="grid" data-grid="fizyoloji"></div>
     </div>
     <div class="exam-panel" role="tabpanel" id="ex-radyoloji" aria-labelledby="tab-radyoloji" hidden>
       <div class="exam-pdfs"><div class="pdfc t-rad"><span class="strip" aria-hidden="true"><i class="t-rad"></i></span><a class="pdf-link pmain" href="ozet-radyoloji-kisa.pdf" target="_blank" rel="noopener" data-file="Radyoloji-Kisa-Ozet.pdf"><b>Sınav öncesi özeti<span class="sr"> · Radyoloji</span></b><span>Radyasyon fiziği ve EM spektrum · 1 sayfa</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-radyoloji-kisa-sb.pdf" target="_blank" rel="noopener" data-file="Radyoloji-Kisa-Ozet-SB.pdf">Siyah-beyaz baskı</a></div><div class="pdfc t-rad"><span class="strip" aria-hidden="true"><i class="t-rad"></i></span><a class="pdf-link pmain" href="ozet-radyoloji.pdf" target="_blank" rel="noopener" data-file="Radyoloji-Ozet.pdf"><b>Ayrıntılı özet<span class="sr"> · Radyoloji</span></b><span>Radyasyon fiziği ve elektromanyetik radyasyon</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-radyoloji-sb.pdf" target="_blank" rel="noopener" data-file="Radyoloji-Ozet-SB.pdf">Siyah-beyaz baskı</a></div></div>
       <div class="exam-go"><button class="btn" data-cards="s:radyoloji">Radyoloji kartları</button><button class="btn ghost" data-quiz="s:radyoloji">Radyoloji testi</button></div>
-      <h3 class="exam-h">Slaytlar</h3><p class="exam-note">Her slayt “Sınavda çıkar · mutlaka bil” kutusuyla açılır.</p>
+      <h2 class="exam-h">Slaytlar</h2><p class="exam-note">Her slayt “Sınavda çıkar · mutlaka bil” kutusuyla açılır.</p>
       <div class="grid" data-grid="radyoloji"></div>
     </div>
     <div class="exam-panel" role="tabpanel" id="ex-anatomi" aria-labelledby="tab-anatomi" hidden>
       <div class="exam-pdfs"><div class="pdfc"><span class="strip" aria-hidden="true"><i class="t-kafa"></i><i class="t-boyun"></i></span><a class="pdf-link pmain" href="ozet-anatomi-kisa.pdf" target="_blank" rel="noopener" data-file="Anatomi-Kisa-Ozet.pdf"><b>Sınav öncesi özeti<span class="sr"> · Anatomi</span></b><span>Kafa kemikleri ve boyun üçgenleri · şemalı</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-anatomi-kisa-sb.pdf" target="_blank" rel="noopener" data-file="Anatomi-Kisa-Ozet-SB.pdf">Siyah-beyaz baskı</a></div><div class="pdfc"><span class="strip" aria-hidden="true"><i class="t-kafa"></i><i class="t-boyun"></i></span><a class="pdf-link pmain" href="ozet-anatomi.pdf" target="_blank" rel="noopener" data-file="Anatomi-Ozet.pdf"><b>Ayrıntılı özet<span class="sr"> · Anatomi</span></b><span>Kafa kemikleri, boyun üçgenleri · şemalı, sınav vurgulu</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-anatomi-sb.pdf" target="_blank" rel="noopener" data-file="Anatomi-Ozet-SB.pdf">Siyah-beyaz baskı</a></div></div>
       <div class="exam-go"><button class="btn" data-cards="s:anatomi">Anatomi kartları</button><button class="btn ghost" data-quiz="s:anatomi">Anatomi testi</button></div>
-      <h3 class="exam-h">Slaytlar</h3><p class="exam-note">Her slayt “Sınavda çıkar · mutlaka bil” kutusuyla açılır.</p>
+      <h2 class="exam-h">Slaytlar</h2><p class="exam-note">Her slayt “Sınavda çıkar · mutlaka bil” kutusuyla açılır.</p>
       <div class="grid" data-grid="anatomi"></div>
     </div>
     <div class="exam-panel" role="tabpanel" id="ex-histoloji" aria-labelledby="tab-histoloji" hidden>
       <div class="exam-pdfs"><div class="pdfc"><span class="strip" aria-hidden="true"><i class="t-his1"></i><i class="t-his2"></i><i class="t-epitel"></i></span><a class="pdf-link pmain" href="ozet-histoloji-kisa.pdf" target="_blank" rel="noopener" data-file="Histoloji-Kisa-Ozet.pdf"><b>Sınav öncesi özeti<span class="sr"> · Histoloji</span></b><span>Giriş, hücre, epitel · şemalı, hoca vurguları</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-histoloji-kisa-sb.pdf" target="_blank" rel="noopener" data-file="Histoloji-Kisa-Ozet-SB.pdf">Siyah-beyaz baskı</a></div><div class="pdfc"><span class="strip" aria-hidden="true"><i class="t-his1"></i><i class="t-his2"></i><i class="t-epitel"></i></span><a class="pdf-link pmain" href="ozet-histoloji.pdf" target="_blank" rel="noopener" data-file="Histoloji-Ozet.pdf"><b>Ayrıntılı özet<span class="sr"> · Histoloji</span></b><span>Histolojiye giriş, hücre, epitel doku · şemalı</span><span class="dl">Renkli PDF</span></a><a class="pdf-link pbw" href="ozet-histoloji-sb.pdf" target="_blank" rel="noopener" data-file="Histoloji-Ozet-SB.pdf">Siyah-beyaz baskı</a></div></div>
       <div class="exam-go"><button class="btn" data-cards="s:histoloji">Histoloji kartları</button><button class="btn ghost" data-quiz="s:histoloji">Histoloji testi</button></div>
-      <h3 class="exam-h">Slaytlar</h3><p class="exam-note">Her slayt “Sınavda çıkar · mutlaka bil” kutusuyla açılır.</p>
+      <h2 class="exam-h">Slaytlar</h2><p class="exam-note">Her slayt “Sınavda çıkar · mutlaka bil” kutusuyla açılır.</p>
       <div class="grid" data-grid="histoloji"></div>
     </div>
     <div class="pdf-status" id="pdf-status" aria-live="polite"></div>
@@ -4926,7 +4973,7 @@ function renderHome(){
   }
   document.getElementById("overall").textContent = tk + " / " + tn + " kart öğrenildi";
   const hr = new Date().getHours(), greet = hr < 5 ? "İyi geceler" : hr < 12 ? "Günaydın" : hr < 18 ? "İyi çalışmalar" : "İyi akşamlar";
-  document.getElementById("hello").textContent = greet + ", hangi sınava çalışıyorsun?";
+  document.getElementById("hello").innerHTML = greet + ', <span class="doodle">hangi sınava</span> çalışıyorsun?';
   setExam(store.get("exam", "fizyoloji"));
   renderHomeToday();
   renderChart(true);
